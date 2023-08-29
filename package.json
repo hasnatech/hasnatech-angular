@@ -6,7 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "git": "git add . && git commit -m 'update' && git push",
+
+    "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/",
+
+    "deploy": "gh-pages -d dist/hasnatech-angular",
+
+    "upload": "ng build --configuration production --base-href ./"
   },
   "private": true,
   "dependencies": {
