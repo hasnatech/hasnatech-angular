@@ -18,9 +18,15 @@
             <a class="nav-link"(click)="service.gotobottom()">Home</a>
            
           </li>
-          <li class="nav-item">
-            <a class="nav-link"(click)="service.gotobottom1()">AboutUs</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  (click)="service.gotobottom1()" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Success Story</a></li>
+            </ul>
           </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link"(click)="service.gotobottom1()">About Us</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link"(click)="service.gotobottom2()">Service</a>
           </li>
