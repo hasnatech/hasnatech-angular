@@ -11,7 +11,7 @@
 
     "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/",
 
-    "deploy": "gh-pages -d dist/hasnatech-angular",
+    "deploy": "gh-pages -d dist/website",
 
     "upload": "ng build --configuration production --base-href ./"
   },
