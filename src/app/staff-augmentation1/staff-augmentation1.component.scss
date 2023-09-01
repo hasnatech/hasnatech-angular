@@ -15,7 +15,7 @@
     font-size: 46px;
     font-weight: 700;
     line-height: normal;
-    padding-top: 115px;
+    padding-top: 90px;
 }
 .clr_grn1{
     color: #049479;
@@ -47,19 +47,18 @@
 }
 
 .card {
-    border: 1px solid #c1c1c1;
+
     border-radius: 10px;
     padding: 18px;
-    box-shadow: 7px 7px 10px #ccc;
+    box-shadow: 4px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 335px;
-    min-height: 325px;
+    min-height: 380px;
 }
 .card2 {
-    border: 1px solid #c1c1c1;
     border-radius: 10px;
     padding: 18px;
-    box-shadow: 7px 7px 10px #ccc;
+    box-shadow: 4px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 275px;
     min-height: 225px;
@@ -74,7 +73,8 @@
 }
 .card-head{
     color: #049479;
-    font-weight: bold;  
+    font-weight: bold;
+    font-size: 24px;  
 }
 .bg-gry{
     background-color: #F4F4F4;

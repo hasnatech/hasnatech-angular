@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ServiceService } from '../service.service';
-
+// import { OwlOptions } from 'ngx-owl-carousel-o';
+// declare let $: any;
 
 @Component({
   selector: 'app-home',
@@ -32,9 +33,15 @@ export class HomeComponent {
 constructor(public service:ServiceService){
   
 }
-ngOnInit(): void{
-
-}
+// ngOnInit(): void {
+//   $(".owl-carousel").owlCarousel({
+//     items: 1,
+//     margin: 10,
+//     loop: false,
+//     nav: true,
+//     dots: true,
+//   });
+// }
 
 count:number = 0;
 countStop:any = setInterval(() =>{

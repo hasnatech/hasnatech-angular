@@ -1,48 +1,58 @@
-
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <div class="menu_flex">
-        <div class="d-flex">
+  <div class="container">
+    <div class="menu_flex">
+      <div class="d-flex">
         <div class="logo">
-           <a href="#" class="logo"> <img src="assets/images/logo.png" alt="logo"></a>
+          <a (click)="gonexthome()" class="logo"> <img src="assets/images/logo.png" alt="logo"></a>
         </div>
         <div class="clr_1">HASNA TECHNOLOGY</div>
-    </div>
-<div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse dropdown " id="navbarNav">
-        <ul class="navbar-nav" >
-          <li class="nav-item" >
-            <a class="nav-link"(click)="service.gotobottom()">Home</a>
-           
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  (click)="service.gotobottom1()" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Success Story</a></li>
-            </ul>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link"(click)="service.gotobottom1()">About Us</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link"(click)="service.gotobottom2()">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"(click)="service.gotobottom3()">Process</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"(click)="service.gotobottom4()">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"href="mailto:info@hasnatech.com?subject=Need your service: from website">Contact Us</a>
-          </li>
+      </div>
+      <div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse dropdown " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" (click)="gonexthome()">Home</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"(click)="gonextAboutus()">About Us</a>
+            </li>
+
+            <li class="nav-item dropdown" (mouseover)="down()"(mouseleave)="leave()">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown_menu " [class.block]="showDrop == true"  >
+                <div>
+                 <a class="dropdown-item" (click)="gonextManagementsystem()">Management System</a>
+                  <a class="dropdown-item" (click)="gonextStaffAugmentation()">Staff Augmentation</a>
+                  <a class="dropdown-item" (click)="gonextCustomDevelopment()">Custom Development</a>
+                </div>
+
+        </div>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link"(click)="gonextPricing()">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Case Studies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="gonextContact()">Contact Us</a>
+        </li>
         </ul>
       </div>
-        </div>
     </div>
-  
-    </div>
-  </nav>
+  </div>
+
+  </div>
+</nav>
