@@ -10,6 +10,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 const routes: Routes = [
   
+  {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'Header',component:HeaderComponent},
   {path:'Managementsystem',component:StaffAugmentationComponent},
