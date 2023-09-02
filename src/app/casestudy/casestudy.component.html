@@ -1,0 +1,26 @@
+<div class="bg_img">
+    <h1 class="container text-white">
+        Case Studies
+    </h1>
+</div>
+<div class="container pt-5">
+    <h2>Unveiling Our Success Stories</h2>
+    <p>Welcome to our Case Studies page, where we take pride in presenting real-world success stories that exemplify our
+        commitment to excellence, innovation, and client satisfaction. Each case study below provides a glimpse into how
+        we've partnered with organizations to overcome challenges and achieve remarkable results.</p>
+</div>
+
+<div class="green-bg"></div>
+<div class="container">
+    <div class="d-flex gap-4 mb-5 flex-wrap">
+        <div class="card" *ngFor="let item of service.casestudies">
+            <img    class="card-img-top" src="{{item.img}}" alt="{{item.title}}">
+            <div class="card-body">
+                <h3 [innerHTML]="item.title"></h3>
+                <p [innerHTML]="item.description"></p> 
+                <a routerLink="{{getLink(item)}}">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <app-action-link></app-action-link>
+</div>

@@ -14,6 +14,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { SafePipePipe } from './safe-pipe.pipe';
+import { ActionLinkComponent } from './action-link/action-link.component';
+import { CasestudyComponent } from './casestudy/casestudy.component';
+import { BlogComponent } from './blog/blog.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { SafePipePipe } from './safe-pipe.pipe';
     ContactUsComponent,
     AboutUsComponent,
     PricingComponent,
-    SafePipePipe
+    SafePipePipe,
+    ActionLinkComponent,
+    CasestudyComponent,
+    BlogComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

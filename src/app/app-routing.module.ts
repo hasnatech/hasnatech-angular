@@ -8,17 +8,23 @@ import { CustomDevelopmentComponent } from './custom-development/custom-developm
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { CasestudyComponent } from './casestudy/casestudy.component';
+import { BlogComponent } from './blog/blog.component';
+import { DetailComponent } from './detail/detail.component';
 const routes: Routes = [
   
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'Header',component:HeaderComponent},
-  {path:'Managementsystem',component:StaffAugmentationComponent},
-  {path:'StaffAugmentation1',component:StaffAugmentation1Component},
-  {path:'CustomDevelopment',component:CustomDevelopmentComponent},
-  {path:'Aboutus',component:AboutUsComponent},
-  {path:'Contactus',component:ContactUsComponent},
-  {path:'Pricing',component:PricingComponent}
+  {path:'service/learning-management-system',component:StaffAugmentationComponent},
+  {path:'service/staff-augmentation',component:StaffAugmentation1Component},
+  {path:'service/custom-development',component:CustomDevelopmentComponent},
+  {path:'about-us',component:AboutUsComponent},
+  {path:'contact-us',component:ContactUsComponent},
+  {path:'pricing',component:PricingComponent},
+  {path:'casestudy',component:CasestudyComponent},
+  {path:'blog',component:BlogComponent},
+  {path:':type/:title/:id',component:DetailComponent},
 ];
 
 @NgModule({
