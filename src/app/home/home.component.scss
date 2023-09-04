@@ -87,6 +87,7 @@
 .fnt-54 {
     font-size: 54px;
     color: #fff;
+    font-weight: bold;
 }
 
 .bg-clr {
@@ -107,6 +108,8 @@
     color: #049479;
     padding-top: 70px;
     padding-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .card {
@@ -116,7 +119,6 @@
     box-shadow: 10px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 345px;
-    min-height: 430px;
 }
 
 .wrap {
@@ -135,6 +137,7 @@
     font-size: 22px;
     margin-bottom: 0px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .space_wht {
@@ -163,6 +166,7 @@
     color: #049479;
     font-weight: 300;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .black_box {

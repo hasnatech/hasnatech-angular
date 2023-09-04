@@ -22,10 +22,20 @@
     color: #333;
     width: 602px;
 }
+.d-flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.fnt_40{
+    font-size: 40px;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 800;
+}
 
 .box-shw {
     color: #000;
-    font-size: 20px;
     font-weight: 400;
     line-height: normal;
     background: #FFF;
@@ -41,10 +51,6 @@
 }
 .bg-grn{
     background-color: #049479;
-    align-items: center;
-    padding: 18px;
-    justify-content: center;
-    gap: 10px;
     color: #FFF;
 }
 .wid-600{

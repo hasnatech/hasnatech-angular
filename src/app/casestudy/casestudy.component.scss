@@ -1,5 +1,7 @@
 .card {
   width: 48%;
+  border-radius: 60px 60px 10px 10px;
+  border-top: 0;
 }
 .bg_img{
   background-image: url(../../assets/images/ser_bg2.png);
@@ -12,4 +14,11 @@
 
 h1 {
   padding-top: 90px;
+}
+.green-bg{
+  background-color: #049479;
+  height: 100px;
+}
+.mt-50{
+  margin-top: -50px;
 }

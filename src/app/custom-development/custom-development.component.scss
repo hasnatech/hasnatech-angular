@@ -32,12 +32,16 @@
     box-shadow: 10px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 335px;
-    min-height: 325px;
+    .card-body{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 .card-head{
     color: #049479;
     font-weight: bold;  
-    font-size: 24px;
+    font-size: 22px;
 }
 .wrap {
     flex-wrap: wrap;
