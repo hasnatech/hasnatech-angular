@@ -29,9 +29,9 @@ export class ContactUsComponent {
   }
 
   positionMap = {
-    street: "Coral Merchant Street",
-    num: "178",
-    city: "Chennai"
+    street: "Eunos Ave 7, Singapore 409575",
+    num: "122",
+    city: "Singapore"
   };
   mapsURL = `https://maps.google.com/maps?q=${this.positionMap.street}%20${this.positionMap.num}%20%${this.positionMap.city}&t=&z=20&ie=UTF8&iwloc=&output=embed`;
 

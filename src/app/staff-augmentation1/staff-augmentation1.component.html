@@ -9,33 +9,32 @@
         <div class="clr_grn1 mt-5">
             Empowering Your Team with On-Demand Expertise
         </div>
-        <div class="mt-4">
+        <p class="mt-4">
             In the dynamic landscape of today's business world, staying agile and responsive is key to success. Yet,
             skill gaps and varying project demands can pose significant challenges. Introducing our Staff Augmentation
             service – a solution crafted to address your needs promptly and effectively.
-        </div>
+        </p>
     </div>
     <div class="bg-grn mt-5 mb-5">
         <div class="container pt-5 pb-5">
             <div class="d-flex1 gap-3">
                 <div>
-
                     <div class="fnt_40">
                         What's the Challenge?
                     </div>
-                    <div class="mt-3 fnt-20">
+                    <p class="mt-3 fnt-20">
                         Finding the right talent swiftly to tackle specialized projects or fill skill gaps is often a
                         daunting task. Delays in acquiring expertise can lead to project bottlenecks, missed deadlines,
                         and
                         resource inefficiencies.
-                    </div>
-                    <div class="mt-3 fnt-20">
+                    </p>
+                    <p class="mt-3 fnt-20">
                         <b>The Solution:</b> Our Staff Augmentation Service Our Staff Augmentation service is your
                         bridge to
                         skilled professionals who seamlessly integrate into your team. We provide the expertise you
                         require
                         to accomplish your projects successfully.
-                    </div>
+                    </p>
                 </div>
                 <div>
                     <img src="assets/images/lady.png">
@@ -43,65 +42,56 @@
             </div>
         </div>
     </div>
-<div class="container mb-5">
-    <div class="clr_grn1">
-        Why Choose Us?
-    </div>
-    <div class="d-flex mt-4 ">
-
-        <div class="flex wrap d-flex align-items-center justify-content-around">
-  
-          <div class="card" style="width: 18rem;" data-aos="fade-up" *ngFor="let item of this.service.staffAugmentation1;">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-              <img class="" src="{{item.image}}">
-                <p class="mt-2 card-head">{{item.heading}}</p>
-                <p class="card-text">{{item.paragraph}}</p>
-            </div>
-  
-          </div>
-  
-        </div>
-  
-      </div>
-
-    
-</div>
-
-<div class="bg-gry pb-4">
     <div class="container mb-5">
-        <div class="clr_grn1 pt-4  text-center">
-            How It Works
+        <div class="clr_grn1">
+            Why Choose Us?
         </div>
         <div class="d-flex mt-4 ">
-    
-            <div class="flex wrap d-flex align-items-center">
-      
-              <div class="card2" style="width: 18rem;" data-aos="fade-up" *ngFor="let item of this.service.card2;">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
-                <div class="card-body">
-                  <img class="" src="{{item.image1}}">
-                    
-                    <p class="card-text mt-3">{{item.paragraph1}}</p>
+            <div class="flex wrap d-flex justify-content-around">
+                <div class="card" style="width: 18rem;" data-aos="fade-up"
+                    *ngFor="let item of this.service.staffAugmentation1;">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <div> <img class="" src="{{item.image}}"></div>
+                        <p class="mt-2 card-head">{{item.heading}}</p>
+                        <p class="card-text">{{item.paragraph}}</p>
+                    </div>
                 </div>
-      
-              </div>
-      
             </div>
-      
-          </div>
-    
-        
+        </div>
     </div>
-</div>
 
-<div class="mt-4 container">
-    Unlock the Power of Staff Augmentation – Empower your team with tailored expertise. Contact us today to explore how our Staff Augmentation service can elevate your projects and amplify your success.
-</div>
+    <div class="bg-gry pb-4">
+        <div class="container mb-5">
+            <div class="clr_grn1 pt-4  text-center">
+                How It Works
+            </div>
+            <div class="d-flex mt-4 ">
+                <div class="flex wrap d-flex4 align-items-center">
+                    <div class="card2" style="width: 18rem;" data-aos="fade-up"
+                        *ngFor="let item of this.service.card2;">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
 
-<div class="jus-cnt  mt-5 mb-5">
-    <div class="button1" class="button" type="button" class="btn btn-primary btn-lg"><a class="txt-dec">Get A
-            Quote</a>
+                            <div> <img class="" src="{{item.image1}}"></div>
+
+                            <p class="card-text mt-3">{{item.paragraph1}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <p class="mt-4 container">
+        Unlock the Power of Staff Augmentation – Empower your team with tailored expertise. Contact us today to explore
+        how our Staff Augmentation service can elevate your projects and amplify your success.
+    </p>
+
+    <div class="jus-cnt  mt-5 mb-5">
+        <div class="button1" (click)="gonextContact()" class="button" type="button" class="btn btn-primary btn-lg"><a
+                class="txt-dec">Get A
+                Quote</a>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-staff-augmentation',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class StaffAugmentationComponent {
 
+
+  constructor(public router: Router) { }
+
+  gonextContact() {
+    this.router.navigate(['/', 'Contactus']);
+  }
 }

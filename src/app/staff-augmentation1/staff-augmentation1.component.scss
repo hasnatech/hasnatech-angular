@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: flex-start;
 }
-.d-flex{
+.d-flex4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,11 @@
     box-shadow: 4px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 335px;
-    min-height: 380px;
+    .card-body{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 .card2 {
     border-radius: 10px;
@@ -61,10 +65,16 @@
     box-shadow: 4px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 275px;
-    min-height: 225px;
+  
     text-align: center;
     display: flex;
     align-items: center;
+    .card-body{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }
 
 .wrap {

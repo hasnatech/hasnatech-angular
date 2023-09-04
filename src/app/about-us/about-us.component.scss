@@ -35,17 +35,26 @@
 
 .d-flex{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .gap-15 {
     gap: 15px;
 }
-
+.fnt-55{
+    font-size: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #049479;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 .fnt-37 {
-    font-size: 40px;
+    font-size: 54px;
     color: #FFF;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .fnt-26 {
@@ -70,6 +79,11 @@
     display: flex;
     align-items: center; 
 }
+.d-flex5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .brd-radius{
     border-radius: 20px 20px 20px 20px;
 }
@@ -79,7 +93,14 @@
     box-shadow: 10px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 325px;
-    min-height: 325px;
+    // min-height: 325px;
+
+    .card-body{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }
 .card-head{
     color: #049479;

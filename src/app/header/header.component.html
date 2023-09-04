@@ -19,40 +19,40 @@
 
             </li>
             <li class="nav-item">
-              <a class="nav-link"(click)="gonextAboutus()">About Us</a>
+              <a class="nav-link" (click)="gonextAboutus()">About Us</a>
             </li>
 
-            <li class="nav-item dropdown" (mouseover)="down()"(mouseleave)="leave()">
+            <li class="nav-item dropdown" (mouseover)="down()" (mouseleave)="leave()">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Services
               </a>
-              <div class="dropdown_menu " [class.block]="showDrop == true"  >
+              <div class="dropdown_menu " [class.block]="showDrop == true">
                 <div>
-                 <a class="dropdown-item" (click)="gonextManagementsystem()">Management System</a>
+                  <a class="dropdown-item" (click)="gonextManagementsystem()">Learning Management System</a>
                   <a class="dropdown-item" (click)="gonextStaffAugmentation()">Staff Augmentation</a>
                   <a class="dropdown-item" (click)="gonextCustomDevelopment()">Custom Development</a>
                 </div>
 
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="gonextPricing()">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="gonextContact()">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link"(click)="gonextPricing()">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Case Studies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="gonextContact()">Contact Us</a>
-        </li>
-        </ul>
       </div>
     </div>
-  </div>
 
   </div>
 </nav>
