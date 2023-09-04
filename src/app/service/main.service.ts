@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
 
-  constructor() { }
+  constructor(private title: Title, private meta: Meta) { }
   getCaseStudy(id: number) {
-    return this.casestudies.filter(f=>f.id == id)[0];
+    return this.casestudies.filter(f => f.id == id)[0];
   }
   getBlog(id: number) {
-    return this.blogs.filter(f=>f.id == id)[0];
+    return this.blogs.filter(f => f.id == id)[0];
   }
   casestudies = [
     {
@@ -109,4 +110,13 @@ export class MainService {
       content: ''
     }
   ]
+
+
+  setMeta(t: string, desc: string, image: string) {
+    this.title.setTitle("Hasna Technology | " + t)
+    this.meta.addTag({ "og:title": t });
+    this.meta.addTag({ "og:description": desc });
+    this.meta.addTag({ "og:image": location.origin+ "/" + image });
+    this.meta.addTag({ "og:url": location.href });
+  }
 }
