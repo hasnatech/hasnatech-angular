@@ -12,8 +12,9 @@ h1 {
 }
 .bg-grn{
     background-color: #049479;
-    position: fixed;
+    position: sticky;
     bottom: 10px;
+    height: 100%;
     right: 10px;
     border-radius: 10px;
     padding: 16px;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
-import { Router } from '@angular/router';
+import { MainService } from '../service/main.service';
 
 
 @Component({
@@ -9,10 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./custom-development.component.scss']
 })
 export class CustomDevelopmentComponent {
-  constructor(public service:ServiceService,public router: Router){}
-
-
-  gonextContact() {
-    this.router.navigate(['/', 'Contactus']);
+  constructor(public service:ServiceService, main:MainService){
+    main.setMeta("Custom Development", "In the ever-evolving landscape of e-learning, we understand that one size doesn't fit all. That's why we offer a range of specialized services to meet your unique requirements", 'assets/image/custom-development.png');
   }
+
 }

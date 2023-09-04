@@ -7,7 +7,9 @@ import { MainService } from '../service/main.service';
   styleUrls: ['./casestudy.component.scss']
 })
 export class CasestudyComponent {
-  constructor(public service: MainService) { }
+  constructor(public service: MainService,main:MainService) {
+    main.setMeta("Case Study", 'description', 'assets/image/case-study.png');
+   }
 
   getLink(item: any) {
     return "/casestudy/" + item.title.toLowerCase().split(" ").join("-") + "/" + item.id;

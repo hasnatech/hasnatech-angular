@@ -92,18 +92,18 @@ export class MainService {
     
      
       `,
-      // list:  ` 
-      // <h4>Blogs</h4>
-      // <ul class="mt-3">
-      // <li class="mt-2">Unlocking the Power of Learning Management Systems (LMS)</li>
-      // <li class="mt-2">Beyond the LMS: The Rise of Learning Experience Platforms (LXP)</li>
-      // <li class="mt-2">Adaptive Learning: Tailoring Education for Individual Success</li>
-      // <li class="mt-2">Gamification: Elevating Engagement and Learning Outcomes</li>
-      // <li class="mt-2">Mobile Learning: Empowering On-the-Go Education</li>
-      // <li class="mt-2">The Future of eLearning: XR and Immersive Learning</li>
-      // <li class="mt-2">Inclusivity in eLearning: Designing for All Learners</li>
-      // </ul>
-      //  `
+      list:  ` 
+      <h4>Blogs</h4>
+      <ul class="mt-3">
+      <li class="mt-2">Unlocking the Power of Learning Management Systems (LMS)</li>
+      <li class="mt-2">Beyond the LMS: The Rise of Learning Experience Platforms (LXP)</li>
+      <li class="mt-2">Adaptive Learning: Tailoring Education for Individual Success</li>
+      <li class="mt-2">Gamification: Elevating Engagement and Learning Outcomes</li>
+      <li class="mt-2">Mobile Learning: Empowering On-the-Go Education</li>
+      <li class="mt-2">The Future of eLearning: XR and Immersive Learning</li>
+      <li class="mt-2">Inclusivity in eLearning: Designing for All Learners</li>
+      </ul>
+       `
     },
     {
       id: 2,
