@@ -7,9 +7,7 @@
     position: relative;
     margin-top: 90px;
 }
-.font-fam{
-    font-family: "Poppins-Regular";
-}
+
 .wht-txt {
     color: #FFF;
     font-size: 46px;
@@ -23,6 +21,17 @@
     font-size: 40px;
     color: #333;
     width: 602px;
+}
+.d-flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.fnt_40{
+    font-size: 40px;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 800;
 }
 
 .box-shw {
@@ -42,10 +51,6 @@
 }
 .bg-grn{
     background-color: #049479;
-    align-items: center;
-    padding: 18px;
-    justify-content: center;
-    gap: 10px;
     color: #FFF;
 }
 .wid-600{

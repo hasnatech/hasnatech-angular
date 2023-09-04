@@ -20,26 +20,6 @@ export class HeaderComponent {
   leave() {
     this.showDrop = false
   }
-  gonextContact() {
-    this.router.navigate(['/', 'Contactus']);
-  }
-  gonexthome() {
-    this.router.navigate(['/', 'home']);
-  }
-  gonextAboutus() {
-    this.router.navigate(['/', 'Aboutus']);
-  }
-  gonextManagementsystem() {
-    this.router.navigate(['/', 'Managementsystem']);
-  }
-  gonextStaffAugmentation() {
-    this.router.navigate(['/', 'StaffAugmentation1']);
-  }
-  gonextCustomDevelopment() {
-    this.router.navigate(['/', 'CustomDevelopment']);
-  }
-  gonextPricing() {
-    this.router.navigate(['/', 'Pricing']);
-  }
+
 }
 

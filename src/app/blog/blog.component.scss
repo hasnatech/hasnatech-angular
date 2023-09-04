@@ -1,0 +1,29 @@
+.card {
+    width: 48%;
+    border-radius: 60px 60px 10px 10px;
+    border-top: 0;
+  }
+  .bg_img{
+    background-image: url(../../assets/images/ser_bg2.png);
+    height: 246px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+h1 {
+    padding-top: 90px;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.green-bg{
+  background-color: #049479;
+  height: 100px;
+}
+.mt-50{
+  margin-top: -50px;
+}

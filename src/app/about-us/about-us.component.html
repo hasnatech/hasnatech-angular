@@ -8,10 +8,10 @@
 
     <div class="d-flex mt-5 mb-5 gap-15 container">
         <div>
-            <div class="fnt-40">
+            <h2>
                 Your Partner in Transformative Learning and Technology Solutions
-            </div>
-            <div class="mt-3 fnt-20">
+            </h2>
+            <div class="mt-3 ">
                 Welcome to Hasna Technology International Private Limited – your gateway to cutting-edge e-learning and
                 software solutions. With a strong presence in Singapore, we are a premier software development company
                 dedicated to delivering excellence through innovation.
@@ -24,13 +24,13 @@
 
     <div class="bg-grn pt-5 pb-5">
         <div class="container">
-            <div class="fnt-37">
+            <h2 class="text-white mb-0">
                 Who We Are
-            </div>
-            <div class="fnt-26 mt-3">
+            </h2>
+            <h3 class="font-light text-white mt-0">
                 Pioneers in Learning and Software
-            </div>
-            <div class="fnt-20 mt-2 wht-txt1">
+            </h3>
+            <div class=" mt-3 wht-txt1">
                 At Hasna Technology International, we pride ourselves on being pioneers in the fields of e-learning and
                 software development. Our expertise lies in crafting immersive e-learning experiences and innovative
                 software solutions that push the boundaries of technology. We are your go-to partner for transforming
@@ -40,8 +40,8 @@
         </div>
     </div>
 
-    <div class="container mt-5 mb-5">
-        <div class="d-flex5">
+    <div class="container mt-4 mb-5">
+        <div class="d-flex justify-content-between g-3">
 
             <div class="flex">
                 <div class="txt-grn">
@@ -83,19 +83,19 @@
 
     <div class="bg-gry pb-5">
         <div class="container">
-            <div class="fnt-55 pt-5 text-center">
+            <h2 class="fnt-40 pt-5 text-center mb-0">
                 What We Offer
-            </div>
+            </h2>
 
             <div class="d-flex1 mt-4 wrap">
 
-                <div class="flex d-flex justify-content-around gap-5">
+                <div class="flex d-flex   gap-5">
                     
                     <div class="card" style="width: 18rem;" data-aos="fade-up" *ngFor="let item of this.service.aboutUs;">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <div><img class="" src="{{item.image}}"></div>
-                            <p class="mt-3 card-head">{{item.heading}}</p>
+                            <img class="" src="{{item.image}}">
+                            <h3 class="mt-3 card-head">{{item.heading}}</h3>
                             <p class="card-text">{{item.paragraph}}</p>
                             <div class="mt-2 mb-2">
                                 <div class="button1" class="button" type="button" class="btn btn-primary btn-lg"><a
@@ -120,53 +120,49 @@
             <img class="brd-radius" src="assets/images/about_us2.png">
         </div>
         <div>
-            <div class="upper-case">
+            <h3 class="font-light text-black mb-0 ">
                 Transformative Solutions
-            </div>
-            <div class="fnt-40">
+            </h3>
+            <h2 class="mt-0">
                 Our Commitment
-            </div>
-            <div class="mt-3 fnt-20">
+            </h2>
+            <p class="mt-3 ">
                 In a world driven by technology, staying ahead requires constant innovation. At Hasna Technology
                 International, we live and breathe the fast-paced tech landscape. We offer more than just services; we
                 provide transformation. Whether it's guiding you through the maze of rapidly evolving technology or
                 crafting solutions that meet your unique needs, we are your trusted partner every step of the way.
-            </div>
+            </p>
         </div>
 
     </div>
 
     <div class="container">
-        <div class="fnt-40 mt-4">
+        <h2 class="mt-4">
             Global Presence, Local Expertise
-        </div>
+        </h2>
 
         <p class="mt-3">
             With our roots in Singapore and a strong functional office in Chennai, we bring a blend of international
             perspective and local expertise to every project. Our global reach enables us to tap into diverse markets,
             while our local understanding ensures that our solutions resonate with your target audience.</p>
 
-        <div class="fnt-40 mt-4">
+        <h2 class="mt-4">
             Unlocking Possibilities
-        </div>
+        </h2>
 
         <p class="mt-3">From interactive e-learning modules that inspire curiosity to software solutions that streamline your
             operations, we believe in unlocking the possibilities that technology offers. As your partner, we go beyond
             delivering projects – we empower you with the tools to achieve your goals and drive success.</p>
 
-        <div class="fnt-40 mt-4">
+        <h2 class="mt-4">
             Let's Create the Future Together
-        </div>
+        </h2>
 
         <p class="mt-3">Experience the impact of modern technology and transformative learning solutions. Join hands with us at Hasna
             Technology International Private Limited and embark on a journey that redefines possibilities.</p>
 
 
-            <div class="jus-cnt mt-5 mb-5">
-                <div class="button1" (click)="gonextContact()" class="button" type="button" class="btn btn-primary btn-lg"><a class="txt-dec">Get A
-                        Quote</a>
-                </div>
-            </div>
+           <app-action-link></app-action-link>
 
     </div>
 

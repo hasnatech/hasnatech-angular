@@ -5,12 +5,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 90px;
 }
 
-.font-fam {
-    font-family: "Poppins-Regular";
-}
+
 
 .wht-txt {
     color: #FFF;
@@ -26,35 +23,26 @@
     font-weight: 700;
 }
 
-.fnt-20 {
-    font-size: 20px;
-}
+// .fnt-20 {
+//     font-size: 20px;
+// }
 .bg-grn{
     background-color: #049479;
 }
 
 .d-flex{
     display: flex;
+    // align-items: center;
+    // justify-content: space-between;
 }
 .gap-15 {
     gap: 15px;
 }
-.fnt-55{
-    font-size: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #049479;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+
 .fnt-37 {
-    font-size: 54px;
+    font-size: 40px;
     color: #FFF;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .fnt-26 {
@@ -79,11 +67,6 @@
     display: flex;
     align-items: center; 
 }
-.d-flex5{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 .brd-radius{
     border-radius: 20px 20px 20px 20px;
 }
@@ -93,14 +76,13 @@
     box-shadow: 10px 7px 7px 10px #ccc;
     margin: 7px;
     min-width: 325px;
-    // min-height: 325px;
-
-    .card-body{
-        display: flex ;
-        flex-direction: column;
-        justify-content: space-between;
+    
+    .card-text{
+        min-height: 136px;
     }
-
+}
+.font-light{
+    font-weight: 100;
 }
 .card-head{
     color: #049479;
@@ -113,23 +95,7 @@
 .bg-gry{
     background: #F5F5F5;
 }
-.btn{
-    border-color: #049479;
-    border-radius: 25px;
-    background: linear-gradient(104deg, #049479 0%, #00ACCC 100%);
-    padding: 10px 30px;
-    width: 175px;
-    .txt-dec{
-        text-decoration: none;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        color: #FFF;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 400;
-    }
-}
+
 .jus-cnt{
     display: flex;
     align-items: center;
@@ -137,8 +103,6 @@
 }
 .upper-case{
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 400;
 }
 
 .btn{
@@ -163,4 +127,3 @@
     align-items: center;
     justify-content: center
 }
-
