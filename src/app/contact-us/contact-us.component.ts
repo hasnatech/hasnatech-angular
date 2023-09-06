@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SafePipePipe } from '../safe-pipe.pipe';
+import { MainService } from '../service/main.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,8 +11,8 @@ export class ContactUsComponent {
 
   employeeDetails: FormGroup;
 
-  constructor(private _details: FormBuilder) {
-
+  constructor(private _details: FormBuilder,main:MainService) {
+    main.setMeta("Contact Us", 'description', 'assets/image/contact-us.png');
     this.employeeDetails = this._details.group({
 
       Name: ['', Validators.required],

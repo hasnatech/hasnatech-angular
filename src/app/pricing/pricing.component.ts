@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { MainService } from '../service/main.service';
 
 @Component({
   selector: 'app-pricing',
@@ -8,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class PricingComponent {
 
-  constructor(public router: Router) { }
-  gonextContact() {
-    this.router.navigate(['/', 'Contactus']);
+  constructor(main:MainService){
+    main.setMeta("Pricing", "At Hasna Technology, we believe in offering flexible pricing options that cater to your unique requirements. Whether you're a small business or an enterprise, our pricing plans are designed to provide value and quality, ensuring you receive the best solution for your goals.", 'assets/image/pricing.png');
   }
+
 }

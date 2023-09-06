@@ -18,6 +18,7 @@ import { ActionLinkComponent } from './action-link/action-link.component';
 import { CasestudyComponent } from './casestudy/casestudy.component';
 import { BlogComponent } from './blog/blog.component';
 import { DetailComponent } from './detail/detail.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DetailComponent } from './detail/detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ServiceService } from '../service.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 // import { OwlOptions } from 'ngx-owl-carousel-o';
 // declare let $: any;
 
@@ -9,7 +10,30 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
   @ViewChild('counter') 
   counter: any;
   param1 = 0;

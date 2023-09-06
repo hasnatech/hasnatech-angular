@@ -7,7 +7,9 @@ import { MainService } from '../service/main.service';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  constructor(public service: MainService) { }
+  constructor(public service: MainService,main:MainService) {
+    main.setMeta("Blog", 'description', 'assets/image/blog.png');
+   }
 
   getLink(item: any) {
     return "/blog/" + item.title.toLowerCase().split(" ").join("-") + "/" + item.id;
