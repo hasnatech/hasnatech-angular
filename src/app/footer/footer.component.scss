@@ -45,15 +45,21 @@ color: #0073e5;
     position: fixed;
     bottom: 10px;
     right: 10px;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 8px;
-    background-color: #049479;
+    // background-color: #049479;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 3px rgb(44 42 42 / 49%);
     font-size: 15px;
+    img{
+        height: 30px;
+    }
     & a{
         color: #fff;
         text-decoration: none;
         font-size: 90%;
-        margin-right: 10px;
+        // margin-right: 10px;
     }
 }
 .whatsapp:hover {
@@ -63,9 +69,7 @@ color: #0073e5;
     margin-top: 25px;
 }
 
-.wid20{
-    width: 40px;
-}
+
 @media (max-width: 414px){
     .black_bg {
         background-color: #000;

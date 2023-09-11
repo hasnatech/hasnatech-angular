@@ -13,6 +13,14 @@ export class MainService {
   getBlog(id: number) {
     return this.blogs.filter(f => f.id == id)[0];
   }
+  getLink(item: any, category: string) {
+    let title = item.title.toLowerCase().split(" ").join("-")
+    title = title.split(":").join("-")
+    title = title.split("(").join("-")
+    title = title.split(")").join("-")
+    title = title.split(";").join("-")
+    return "/" + category + "/" + title  + "/" + item.id;
+  }
   casestudies = [
     {
       id: 1,
@@ -92,25 +100,14 @@ export class MainService {
     
      
       `,
-      list:  ` 
-      <h4>Blogs</h4>
-      <ul class="mt-3">
-      <li class="mt-2">Unlocking the Power of Learning Management Systems (LMS)</li>
-      <li class="mt-2">Beyond the LMS: The Rise of Learning Experience Platforms (LXP)</li>
-      <li class="mt-2">Adaptive Learning: Tailoring Education for Individual Success</li>
-      <li class="mt-2">Gamification: Elevating Engagement and Learning Outcomes</li>
-      <li class="mt-2">Mobile Learning: Empowering On-the-Go Education</li>
-      <li class="mt-2">The Future of eLearning: XR and Immersive Learning</li>
-      <li class="mt-2">Inclusivity in eLearning: Designing for All Learners</li>
-      </ul>
-       `
+      
     },
     {
       id: 2,
       title: 'Unlocking the Power of Learning Management Systems (LMS)',
       description: `Dive into the world of LMS platforms and their role in delivering seamless, personalized, and efficient training experiences. Learn how to harness their full potential.`,
       img: 'assets/images/blog/blog_2.png',
-      content:  `
+      content: `
       <h2>Power of Learning Management Systems</h2>
       <p>In today's fast-paced world, where continuous learning and skill development are essential for personal and professional growth, Learning Management Systems (LMS) have emerged as powerful tools to facilitate education and training. LMS platforms offer a structured approach to managing, delivering, and tracking educational content, making them invaluable assets for schools, universities, businesses, and individuals alike. In this blog, we will explore the incredible potential of LMS and how they are revolutionizing the way we learn and teach.</p>
       <p><img src='assets/images/blog/blog_1_1.png'></p> 
@@ -126,7 +123,7 @@ export class MainService {
       <p>Modern LMS platforms foster collaboration among learners and instructors. Discussion forums, chat rooms, and collaborative projects enable students to engage in meaningful interactions, share ideas, and learn from one another. This not only enhances the learning experience but also develops essential skills such as teamwork and communication, which are highly valuable in the workplace.</p>
       <h2>6. Automation and Efficiency</h2>
       <p>LMS platforms streamline administrative tasks, reducing the burden on educators and administrators. Features like automated grading, enrollment management, and content distribution simplify the logistics of education and training. This automation frees up valuable time and resources that can be reinvested in improving the quality of instruction.</p>
-      <h2 class="d-flex"><div>7.</div> <div>Continuous Learning and Skill Development</div></h2>
+      <h2 class="d-flex gap-2"><div>7. </div> <div> Continuous Learning and Skill Development</div></h2>
       <p>In a rapidly evolving world, continuous learning is key to staying relevant and competitive. LMS platforms facilitate lifelong learning by offering a diverse range of courses and resources. Whether you want to acquire new skills, update existing ones, or explore entirely new fields, LMS platforms provide the tools and content to support your journey.</p>
       `
 
@@ -154,7 +151,7 @@ export class MainService {
       <p>LXPs provide robust analytics and reporting features, allowing organizations to track learner progress, engagement, and the effectiveness of their learning programs. This data-driven approach helps organizations make informed decisions about content optimization and learning strategy.</p>
       <h2>7. Integration and Scalability</h2>
       <p>Many LXPs are designed to integrate with other tools and systems, such as HR software, talent management systems, and video conferencing platforms. This integration streamlines administrative tasks and ensures a seamless learning experience for users.</p>
-      <h2 class="d-flex"><div>8.</div> <div>Employee Engagement and Retention</div></h2>
+      <h2 class="d-flex gap-2"><div>8.</div> <div>Employee Engagement and Retention</div></h2>
       <p>LXPs contribute to higher employee engagement and retention rates. By offering a more engaging and personalized learning experience, employees are more likely to stay motivated and invested in their development.</p>
       <h2>9. Compliance and Certification</h2>
       <p>While LXPs prioritize the learner experience, they also include features to ensure compliance with regulatory requirements and certification tracking, making them suitable for industries with strict compliance standards.</p>
@@ -162,7 +159,7 @@ export class MainService {
       <p>The LXP market has seen rapid growth, with many software vendors offering LXP solutions. Some well-known vendors in this space include Cornerstone OnDemand, EdCast, Totara Learn, and Docebo, among others.</p>
       
       `
-      
+
     },
     {
       id: 4,
@@ -192,7 +189,7 @@ export class MainService {
     this.title.setTitle("Hasna Technology | " + t)
     this.meta.addTag({ "og:title": t });
     this.meta.addTag({ "og:description": desc });
-    this.meta.addTag({ "og:image": location.origin+ "/" + image });
+    this.meta.addTag({ "og:image": location.origin + "/" + image });
     this.meta.addTag({ "og:url": location.href });
   }
 }

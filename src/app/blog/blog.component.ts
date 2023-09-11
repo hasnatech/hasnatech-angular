@@ -11,7 +11,4 @@ export class BlogComponent {
     main.setMeta("Blog", 'description', 'assets/image/blog.png');
    }
 
-  getLink(item: any) {
-    return "/blog/" + item.title.toLowerCase().split(" ").join("-") + "/" + item.id;
-  }
 }

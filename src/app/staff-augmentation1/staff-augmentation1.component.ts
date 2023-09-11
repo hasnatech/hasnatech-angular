@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
-import { Title } from '@angular/platform-browser';
 import { MainService } from '../service/main.service';
 @Component({
   selector: 'app-staff-augmentation1',

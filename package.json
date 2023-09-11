@@ -9,8 +9,9 @@
     "test": "ng test",
     "git": "git add . && git commit -m 'update' && git push",
     "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/",
+    "preupload": "ng build --configuration production --base-href /",
     "deploy": "gh-pages -d dist/website",
-    "upload": "ng build --configuration production --base-href ./"
+    "upload": "gh-pages -d dist/website"
   },
   "private": true,
   "dependencies": {

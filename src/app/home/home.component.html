@@ -22,8 +22,8 @@
 <div id="thirdpage"></div>
 <div class="container-fluid mt-5 bg-clr">
   <div class="container">
-    <div class="d-flex-5">
-      <div class="">
+    <div class="row">
+      <div class="col-lg-6">
         <div class="fnt-54 abs-txt pb-3">WHAT WE DO</div>
         <p class="wht_txt">Hasna Technology International Private limited is a registered company in Singapore and
           functional office in Chennai. It is a leading software development company that offers eLearning and software
@@ -36,7 +36,7 @@
         <p class="wht_txt">We believe that we can make your dreams come true by creating a beautiful world using latest
           technology.</p>
       </div>
-      <div>
+      <div class="col-lg-6">
         <img class="pad-top" src="assets/images/table.png">
       </div>
     </div>
@@ -87,207 +87,33 @@
     </div>
   </div>
 </div>
-<!-- 
-<div>
-  
-  <h1 #counter [countUp]="param2" [duration]="duration"></h1>
-  <h1 #counter [countUp]="param3" [duration]="duration"></h1>
-  <h1 #counter [countUp]="param4" [duration]="duration"></h1>
-</div> -->
-
-<!-- <div class="black_box mb-4" #counter>
-  <div class="middle">
-    <div class="flex">
-      <div class="num-panel">
-        <div class="num">
-          <span [countUp]="param1" [duration]="duration"></span>+
-          <div class="title">
-            COURSES
-          </div>
-        </div>
-      </div>
-      <div class="num-panel">
-        <div class="num">
-          <span [countUp]="param2" [duration]="duration"></span>+
-          <div class="title">
-            HOURS OF LEARNING
-          </div>
-        </div>
-      </div>
-      <div class="num-panel">
-        <div class="num">
-          <span [countUp]="param3" [duration]="duration"></span>+
-          <div class="title">
-            CLIENTS
-          </div>
-        </div>
-      </div>
-      <div class="num-panel">
-        <div class="num">
-          <span [countUp]="param4" [duration]="duration"></span>M+
-          <div class="title">
-            ACCESSED
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <!-- section-5 -->
-<div id="sixthpage">
-  <!-- <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>Slide 1</ng-template>  
-    <ng-template carouselSlide>Slide 2</ng-template>  
-    <ng-template carouselSlide>Slide 3</ng-template>  
-  </owl-carousel-o> -->
+
+<div id="sixthpage" class="bg-black pt-5">
+
+  <div class="container">
+    <div class="text-center text-white">
+      <h2 class="uppercase mb-2 text-white">What Our Customers Says!</h2>
+      <p class="mb-3">Know what our esteemed customers have to say about us.</p>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let item of testimonials">
+        <div class="card card-dark" style="width: 18rem;">
+          <div class="card-body">
+            <div class="text-center">
+              <img src="{{item.img}}" class="" alt="">
+            </div>
+            <h5 class="card-title text-center">{{item.header}}</h5>
+            <p class="card-text card-describe">{{item.describe}}</p>
+            <div class="text-right">
+              <h6 class="card-subtitle mb-0">{{item.name}}</h6>
+              <p class="card-desgination mb-0">{{item.title}}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
 </div>
-<!-- <div class="portfolio">
-  <div class="top_pad mt-4">
-    <div class="head-txt mb-5">
-      PORTFOLIO
-    </div>
-
-    <div class="d-flex_1">
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_1.jpg">
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_2.jpg">
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_3.jpg">
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_4.png">
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_5.png">
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="portfolio_wid">
-          <img class="" src="assets/images/portfolio_6.jpg">
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="d-flex">
-      <div class="flex_wid">
-        <div class="elearning">
-          <a target="_blank" href="https://rise.articulate.com/share/uheNUhuBV0_Fzh9tHotVBeS5dZW3Jb1B#/?_k=tcez7a">
-            <img class="" src="assets/images/elearning.png">
-          </a>
-        </div>
-      </div>
-      <div class="flex_wid">
-        <div class="elearning">
-          <a target="_blank"
-            href="https://allisongoldthorpe.com/wp-content/uploads/articulate_uploads/153-_Blue_Beta_Facilities_Orientation/index.html#/?_k=zbizn1">
-            <img class="" src="assets/images/elearning2.png">
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div> -->
-
-<!-- section 6 -->
-
-<!-- <div class="Location">
-  <div class="container top_pad mt-3">
-    <div class="">
-      <div class="mb-5 fnt-48">Office Location</div>
-    </div>
-    <div class="d-flex_2">
-      <div class="flex">
-        <div class="fnt-27">
-          Hasna Technology
-        </div>
-        <div class="d-flex_3 mt-4 mb-4">
-          <div class="">
-            <img src="assets/images/india.png">
-          </div>
-          <div class="fnt-27">
-            India</div>
-        </div>
-        <div class="wid190">
-          Old No 30 New No 69,
-          Malayappan Street
-          Broadway, Chennai
-          Tamilnadu, India
-          Pincode: 600001
-        </div>
-      </div>
-      <div class="flex">
-        <div class="fnt-27">
-          Hasna Technology International Pte Ltd
-        </div>
-        <div class="d-flex_3 mt-4 mb-4">
-          <div class="">
-            <img src="assets/images/singapore.png">
-          </div>
-          <div class="fnt-27">
-            Singapore</div>
-        </div>
-        <div class="wid100">
-          122 Eunos Avenue 7<br>
-          #06-04
-          <br>Richfield Industrial Center
-          Singapore: 409575<br>
-          Mobile: <a href="tel: +65 8101 6474"><u class="clr_grn">+65 8101 6474</u></a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div> -->
-
-<!-- <div class="cara anim">
-
-  <div class="owl-carousel owl-theme ">
-      <div class="item">
-          <div class="inner_item">
-              <div class="img"><img class="img-fluid" src="assets/images/m2/caro1.png" alt=""></div>
-              <div class="text">
-                  <p class="m-0">The Cargill Cares Employee Disaster Relief Fund (EDRF) supports employees
-                      globally during catastrophic events and natural disasters such as war, hurricanes,
-                      tornadoes, wildfires, etc.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="item">
-          <div class="inner_item">
-              <div class="img"><img class="img-fluid" src="assets/images/m2/caro2.png" alt=""></div>
-              <div class="text">
-                  <p class="m-0">It also provides assistance during personal disasters like house fires or in-home
-                      flooding.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="item">
-          <div class="inner_item">
-              <div class="img"><img class="img-fluid" src="assets/images/m2/caro3.png" alt=""></div>
-              <div class="text">
-                  <p class="m-0">The fund offers financial aid and support for basic needs such as food, housing,
-                      and transportation.</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div> -->
+<app-action-link></app-action-link> 
