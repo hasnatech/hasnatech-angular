@@ -11,6 +11,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { CasestudyComponent } from './casestudy/casestudy.component';
 import { BlogComponent } from './blog/blog.component';
 import { DetailComponent } from './detail/detail.component';
+import { ScormComponent } from './scorm/scorm.component';
 const routes: Routes = [
   
   {path:'',component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'service/learning-management-system',component:StaffAugmentationComponent},
   {path:'service/staff-augmentation',component:StaffAugmentation1Component},
   {path:'service/custom-development',component:CustomDevelopmentComponent},
+  {path:'service/scorm',component:ScormComponent},
   {path:'about-us',component:AboutUsComponent},
   {path:'contact-us',component:ContactUsComponent},
   {path:'pricing',component:PricingComponent},
