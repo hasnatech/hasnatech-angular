@@ -1,0 +1,26 @@
+<div class="bg_img">
+    <h1 class="container text-white">
+        Blogs
+    </h1>
+</div>
+<div class="container pt-5">
+    <h2>Navigating the Digital Learning Landscape</h2>
+    <p>Explore the forefront of digital education and organizational development through our insightful eLearning blog.
+        We are excited to present a collection of articles that delve into key trends, technologies, and strategies
+        shaping the eLearning, LMS, and LXP landscape. Join us on this journey of discovery and empowerment.</p>
+</div>
+
+<div class="green-bg"></div>
+<div class="container mt-50">
+    <div class="d-flex gap-4 mb-5 flex-wrap">
+        <div class="card" routerLink="{{service.getLink(item, 'blog')}}" *ngFor="let item of service.blogs">
+            <img class="card-img-top" src="{{item.img}}" alt="{{item.title}}">
+            <div class="card-body">
+                <h3 [innerHTML]="item.title"></h3>
+                <p [innerHTML]="item.description"></p>
+                <a routerLink="{{service.getLink(item, 'blog')}}" >Learn more</a>
+            </div>
+        </div>
+    </div>
+    <app-action-link></app-action-link>
+</div>

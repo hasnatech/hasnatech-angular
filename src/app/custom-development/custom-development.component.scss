@@ -1,0 +1,72 @@
+.bg_img {
+    background-image: url(../../assets/images/ser_bg2.png);
+    height: 246px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 90px;
+}
+
+.wht-txt {
+    color: #FFF;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 90px;
+}
+.clr_grn1{
+    color: #049479;
+    font-weight: 800;
+    font-size: 40px;
+}
+.d-flex1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 10px 7px 7px 10px #ccc;
+    margin: 7px;
+    min-width: 335px;
+    .card-body{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.card-head{
+    color: #049479;
+    font-weight: bold;  
+    font-size: 22px;
+}
+.wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.btn{
+    border-color: #049479;
+    border-radius: 25px;
+    background: linear-gradient(104deg, #049479 0%, #00ACCC 100%);
+    padding: 10px 30px;
+    width: 190px;
+    .txt-dec{
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.jus-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

@@ -1,0 +1,123 @@
+<div class="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="landing_sec">EMPOWERING ORGANIZATIONAL</div>
+        <h2 class="fnt_50">Transformation through People</h2>
+        <div class="">At <span class="clr_grn"><b>Hasna Technology</b></span> we believe in the power of
+          people to drive transformative change. Through innovative learning solutions, we empower individuals to
+          acquire new skills, embrace digital transformation, and spearhead organizational growth.</div>
+        <div type="button" class="btn btn-primary btn-lg mt-3"><a class="txt-dec" href="/contact-us">Contact
+            Us</a></div>
+      </div>
+      <div class="col-lg-6 mt-5">
+        <img class="img-fluid" src="assets/images/home.png">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Section 2 -->
+<div class="section-2">
+  <div class="mt-5 bg-clr">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="p-2">
+            <div class="fnt-54 abs-txt pb-3">WHAT WE DO</div>
+            <p class="wht_txt">Hasna Technology International Private limited is a registered company in Singapore and
+              functional office in Chennai. It is a leading software development company that offers eLearning and
+              software
+              solutions are specialised in web development services.</p>
+            <p class="wht_txt">Be it creation of interactive design or software solutions client get the latest
+              technology
+              solution at its best. Our services include web development, web designing, e-commerce development,
+              e-Learning
+              development, software development, and mobile app development. As specialists in understanding and
+              exploiting
+              the fast growing technology, we provide consultation, advice and support to our customers in providing
+              required services to increase financial revenue.</p>
+            <p class="wht_txt">We believe that we can make your dreams come true by creating a beautiful world using
+              latest
+              technology.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="assets/images/table.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- //Section 3 -->
+<div class="section-3">
+  <div class="bg-gry">
+    <div class="container">
+      <div class="wid-1366">
+        <div class="fnt-55">What We Offer</div>
+        <div class="d-flex in">
+
+          <div class="flex d-flex align-items-center justify-content-around">
+
+            <div class="card" style="width: 18rem;" data-aos="fade-up" *ngFor="let item of this.service.homecard;">
+
+              <div class="card-body">
+                <img class="" src="{{item.image}}">
+                <div class="hov-txt">
+                  <p class="card-head">{{item.heading}}</p>
+                  <p class="card-text">{{item.paragraph}}</p>
+                  <div class="mt-2 mb-2">
+                    <div type="button" class="card-btn btn-primary btn-lg button1"><a class="txt-dec">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Section 4 -->
+<div class="section-4">
+  <div class="bg-clr2">
+    <div class="container top_pad">
+      <div class="head-txt">
+        Our Process
+      </div>
+      <div>
+        <img class="mt-4 img-fluid" src="assets/images/process.png">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section-5 -->
+<div class="section-5">
+  <div class="bg-black pt-5">
+    <div class="container">
+      <div class="text-center text-white">
+        <h2 class="uppercase mb-2 text-white">What Our Customers Says!</h2>
+        <p class="mb-3">Know what our esteemed customers have to say about us.</p>
+      </div>
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let item of testimonials">
+          <div class="card card-dark" style="width: 18rem;">
+            <div class="card-body">
+              <div class="text-center">
+                <img src="{{item.img}}" class="" alt="">
+              </div>
+              <h5 class="card-title text-center">{{item.header}}</h5>
+              <p class="card-text card-describe">{{item.describe}}</p>
+              <div class="text-right">
+                <h6 class="card-subtitle mb-0">{{item.name}}</h6>
+                <p class="card-desgination mb-0">{{item.title}}</p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>
+<app-action-link></app-action-link>  

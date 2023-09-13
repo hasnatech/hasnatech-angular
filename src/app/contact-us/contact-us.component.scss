@@ -1,0 +1,61 @@
+.bg_img {
+    background-image: url(../../assets/images/contact-us.png);
+    height: 246px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 90px;
+}
+.wht-txt {
+    color: #FFF;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 90px;
+}
+// .gap-50{
+//     gap: 70px;
+// }
+.d-flex{
+    justify-content: space-between;
+}
+.flex-1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    .fnt-18{
+        font-size: 18px;
+    }
+}
+.brd-lft{
+  border-left: 1px solid #E5E5E5;
+  height: 35px;
+}
+.fnt-44{
+    font-size: 44px;
+    font-weight: 700;
+}
+.fnt-16{
+    font-size: 16px;
+}
+.brd-radius{
+    padding: 20px 20px;
+     border-radius: 16px;
+background: #FFF;
+box-shadow: 10px 1px 25px 10px rgba(54, 95, 104, 0.10);
+
+}
+.form-control{
+background: #F5F5F2;
+border: none;
+padding: 10px;
+}
+
+.btn{
+    width: 170px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+}

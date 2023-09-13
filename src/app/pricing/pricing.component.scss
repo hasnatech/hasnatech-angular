@@ -1,0 +1,114 @@
+.bg_img {
+    background-image: url(../../assets/images/ser_bg2.png);
+    height: 246px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 90px;
+}
+.wht-txt {
+    color: #FFF;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 90px;
+}
+
+.grn-txt{
+    font-size: 40px;
+    font-weight: 700;
+    color: #049479;
+}
+.card {
+    border: 2px solid #049479;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 7px;
+    min-width: 325px;
+    // min-height: 325px;
+    padding-top: 0;
+}
+.box-shw{
+    box-shadow: 10px 10px 0px 0px #049479;
+}
+.fnt-16{
+  font-size: 16px;
+  font-weight: 700;
+  
+}
+.fnt-22{
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+.fnt-30{
+  font-size: 44px;
+  font-weight: 700;
+}
+.card-btn{
+    color: #FFF;
+    background-color: #049479;
+    padding: 10px 20px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    .txt-dec{
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        border: none;
+    }
+}
+.border-bot{
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 25px;
+}
+.card-head{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.gry-txt{
+    color: rgba(10, 16, 47, 0.70);
+text-align: center;
+font-size: 14px;
+font-weight: 400;
+}
+.card-text{
+    text-align: center;
+}
+
+.btn{
+    border-color: #049479;
+    border-radius: 25px;
+    background: linear-gradient(104deg, #049479 0%, #00ACCC 100%);
+    padding: 10px 30px;
+    width: 190px;
+    .txt-dec{
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.jus-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.card-body{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
