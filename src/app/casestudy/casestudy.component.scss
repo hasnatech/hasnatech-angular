@@ -27,8 +27,8 @@ h1 {
 }
 
 .row_container {
-  // min-height: 500px;
-  border: 1px solid #000;
+  min-height: 100%;
+  // border: 1px solid #000;
   position: relative;
   top: -30px;
   border-radius: 10px;
@@ -42,7 +42,7 @@ h1 {
   }
 
   .row_body {
-    min-height: 235px;
+    // min-height: 235px;
     // background-color: rgb(17, 211, 11);
   }
 
@@ -81,4 +81,11 @@ h1 {
     background-image: url("../../assets/images/casestudy/casestudy_4.png");
 
   }
+}
+
+.aligncol{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 277px;
 }

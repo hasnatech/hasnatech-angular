@@ -107,10 +107,10 @@ export class MainService {
   
       <h3>Our Approach:</h3>
       <p>We recommended leveraging video animation to create engaging and informative training modules on key topics like safety and training importance.</p>
-
+      <div class="video-responsive">
       <iframe class='mb-3' width="560" height="315" src="https://www.youtube.com/embed/SzEBRrpRjZE?si=2rb54XekoN_W44YM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      
-      <h3>Key Takeaway:</h3>
+      </div>
+      <h3 class="mt-4">Key Takeaway:</h3>
       <p>Video animations provided an efficient, scalable, and engaging solution, ensuring all recruits received vital training.</p>
   
       <h3>Conclusion:</h3>
@@ -207,21 +207,21 @@ export class MainService {
       <h2>Top eLearning Trends for 2023</h2>
       <p>In the ever-evolving landscape of education and training, staying ahead of the curve is essential to provide effective and engaging learning experiences. As we step into 2023, a new wave of eLearning trends is set to reshape the way we learn, teach, and train. Let's explore the top eLearning trends that are poised to make a significant impact this year.</p>
       <p><img class="img-fluid" src='assets/images/blog/blog_1_1.png'></p> 
-      <h2>1. Microlearning Takes Center Stage</h2>
+      <h2 class="d-flex"><span>1.</span>&nbsp<div> Microlearning Takes Center Stage</div></h2>
       <p>Microlearning continues to gain momentum as one of the most efficient and learner-friendly approaches to education. Bite-sized content, easily digestible on-the-go, enables learners to acquire knowledge in short bursts. From quick tutorials to focused skill-building, microlearning caters to modern learners' busy schedules and short attention spans.</p>
-      <h2>2. AI-Driven Personalization</h2>
+      <h2 class="d-flex"><span>2.</span>&nbsp<div>AI-Driven Personalization</div></h2>
       <p>Artificial Intelligence (AI) is revolutionizing eLearning by providing personalized learning paths based on individual preferences, learning styles, and performance data. AI-driven algorithms analyze learner behavior to deliver targeted content recommendations, ensuring a tailored learning experience that maximizes engagement and knowledge retention.</p>
-      <h2>3. Data-Driven Learning Analytics</h2>
+      <h2 class="d-flex"><span>3.</span>&nbsp<div>Data-Driven Learning Analytics</div></h2>
       <p>Learning analytics powered by data provide valuable insights into learners' progress, challenges, and preferences. Educators and trainers can leverage this data to identify areas for improvement, customize content, and make informed decisions to enhance learning outcomes.</p>
-      <h2>4. Collaborative and Social Learning</h2>
+      <h2 class="d-flex"><span>4.</span>&nbsp<div>Collaborative and Social Learning</div></h2>
       <p>Building on the success of social media platforms, eLearning is embracing collaborative and social learning environments. Online forums, discussion boards, and interactive group activities facilitate peer-to-peer learning, knowledge sharing, and community engagement.</p>
-      <h2>5. Inclusive Design and Accessibility</h2>
+      <h2 class="d-flex"><span>5.</span>&nbsp<div>Inclusive Design and Accessibility</div></h2>
       <p>Inclusivity is at the forefront of eLearning design. Content creators are focusing on designing for diverse learning styles and abilities. Accessibility features, such as closed captions, alternative text, and screen reader compatibility, ensure that learning materials are accessible to all learners.</p>
-      <h2>6. Gamification for Engagement</h2>
+      <h2 class="d-flex"><span>6.</span>&nbsp<div>Gamification for Engagement</div></h2>
       <p>Gamification techniques, such as leaderboards, badges, and interactive challenges, continue to enhance learner engagement. By infusing game elements into eLearning, educators motivate learners, create friendly competition, and foster a sense of accomplishment.</p>
-      <h2>7. Personal Learning Assistants</h2>
+      <h2 class="d-flex"><span>7.</span>&nbsp<div>Personal Learning Assistants</div></h2>
       <p>AI-powered personal learning assistants guide learners through their educational journeys. These assistants offer real-time support, answer questions, and provide additional resources, promoting continuous learning and self-directed exploration.</p>
-      <h2>8. Blended Learning Evolution</h2>
+      <h2 class="d-flex"><span>8.</span>&nbsp<div>Blended Learning Evolution</div></h2>
       <p>Blended learning, the integration of both in-person and online instruction, evolves to meet diverse learning preferences. Hybrid models incorporate synchronous and asynchronous online sessions, allowing learners to balance structured learning with self-paced exploration.</p>
       <p>As we step into 2023, these eLearning trends promise to reshape education and training. Embracing these trends empowers educators, trainers, and learners to harness the full potential of digital technology for enriched and impactful learning experiences. Stay tuned, stay adaptive, and embrace the future of eLearning. vc </p>
     

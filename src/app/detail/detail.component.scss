@@ -1,11 +1,12 @@
 .bg_img{
     background-image: url(../../assets/images/ser_bg2.png);
-    // height: 246px;
-    min-width: 100%;
+    min-height: 246px;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding-bottom: 30px;
+    margin-top: 85px;
+    padding-bottom: 20px;
 }
 
 h1 {

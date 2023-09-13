@@ -22,11 +22,11 @@
             </div>
         </div>
     </div> -->
-    <div class="row mb-3">
+     <div class="row mb-3">
         <div class="col-lg-6 mt-5 bg" routerLink="{{service.getLink(item, 'blog')}}" *ngFor="let item of service.blogs">
-            <div class="row_container">
+            <div class="row_container shadow-lg">
                 <div class="row_header">
-                    <!-- <img class="img-fluid" src="{{item.img}}" alt="{{item.title}}"> -->
+                     <!-- <img class="img-fluid" src="{{item.img}}" alt="{{item.title}}"> -->
                 </div>
                 <div class="row_body p-3">
                     <h3 [innerHTML]="item.title"></h3>
