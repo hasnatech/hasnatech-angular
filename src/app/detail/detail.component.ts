@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from '../service/main.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail',
@@ -11,15 +12,14 @@ export class DetailComponent {
   routeSub: any;
   data: any;
   list: any;
-  constructor(public service: MainService, private route: ActivatedRoute) { }
+  constructor(public service: MainService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       let type = params['type'];
 
       if (type == 'casestudy') {
         this.data = this.service.getCaseStudy(params['id']);
-
-        this.data = this.service.getBlog(params['id']);
+        this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
         this.list = "<h3 class='text-white mb-3'>Recent Casestudy</h3><ul>"
         this.service.casestudies.slice(0, 11).forEach(casestudy => {
           if (this.data.id != casestudy.id) {

@@ -19,6 +19,7 @@ import { CasestudyComponent } from './casestudy/casestudy.component';
 import { BlogComponent } from './blog/blog.component';
 import { DetailComponent } from './detail/detail.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ScormComponent } from './scorm/scorm.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ActionLinkComponent,
     CasestudyComponent,
     BlogComponent,
-    DetailComponent
+    DetailComponent,
+    ScormComponent
   ],
   imports: [
     BrowserModule,

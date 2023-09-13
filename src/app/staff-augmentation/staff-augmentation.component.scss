@@ -1,33 +1,19 @@
-// .bg_img {
-//     background-image: url(../../assets/images/ser_bg2.png);
-//     height: 246px;
-//     width: 100%;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     position: relative;
-//     margin-top: 90px;
-// }
-.home_bg {
-    background-image: url('../../assets/images/ser_bg2.png');
-    background-position: center top;
+.bg_img {
+    background-image: url(../../assets/images/ser_bg2.png);
+    height: 246px;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    // min-height: calc(100vh - 242px);
-    min-height: calc(100vh - 400px);
-}
-
-.center-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    margin-top: 90px;
 }
 
 .wht-txt {
     color: #FFF;
-    // font-size: 46px;
+    font-size: 46px;
     font-weight: 700;
     line-height: normal;
-    // padding-top: 90px;
+    padding-top: 90px;
 }
 
 .bold-txt {
