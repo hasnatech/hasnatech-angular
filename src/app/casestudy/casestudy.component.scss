@@ -3,7 +3,8 @@
   border-radius: 60px 60px 10px 10px;
   border-top: 0;
 }
-.bg_img{
+
+.bg_img {
   background-image: url(../../assets/images/ser_bg2.png);
   height: 246px;
   width: 100%;
@@ -15,10 +16,69 @@
 h1 {
   padding-top: 90px;
 }
-.green-bg{
+
+.green-bg {
   background-color: #049479;
   height: 100px;
 }
-.mt-50{
+
+.mt-50 {
   margin-top: -50px;
+}
+
+.row_container {
+  // min-height: 500px;
+  border: 1px solid #000;
+  position: relative;
+  top: -30px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  .row_header {
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .row_body {
+    min-height: 235px;
+    // background-color: rgb(17, 211, 11);
+  }
+
+  .row_footer {
+    min-height: 60px;
+    // background-color: rgb(52, 18, 207);
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+.bg:nth-child(1) {
+  .row_header {
+    background-image: url("../../assets/images/casestudy/casestudy_1.png");
+
+  }
+}
+
+.bg:nth-child(2) {
+  .row_header {
+    background-image: url("../../assets/images/casestudy/casestudy_2.png");
+
+  }
+}
+
+.bg:nth-child(3) {
+  .row_header {
+    background-image: url("../../assets/images/casestudy/casestudy_3.png");
+
+  }
+}
+
+.bg:nth-child(4) {
+  .row_header {
+    background-image: url("../../assets/images/casestudy/casestudy_4.png");
+
+  }
 }

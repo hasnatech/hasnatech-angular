@@ -206,7 +206,7 @@ export class MainService {
       content: `
       <h2>Top eLearning Trends for 2023</h2>
       <p>In the ever-evolving landscape of education and training, staying ahead of the curve is essential to provide effective and engaging learning experiences. As we step into 2023, a new wave of eLearning trends is set to reshape the way we learn, teach, and train. Let's explore the top eLearning trends that are poised to make a significant impact this year.</p>
-      <p><img src='assets/images/blog/blog_1_1.png'></p> 
+      <p><img class="img-fluid" src='assets/images/blog/blog_1_1.png'></p> 
       <h2>1. Microlearning Takes Center Stage</h2>
       <p>Microlearning continues to gain momentum as one of the most efficient and learner-friendly approaches to education. Bite-sized content, easily digestible on-the-go, enables learners to acquire knowledge in short bursts. From quick tutorials to focused skill-building, microlearning caters to modern learners' busy schedules and short attention spans.</p>
       <h2>2. AI-Driven Personalization</h2>
