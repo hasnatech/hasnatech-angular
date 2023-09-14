@@ -42,7 +42,7 @@ import { ScormComponent } from './scorm/scorm.component';
     ScormComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule 
