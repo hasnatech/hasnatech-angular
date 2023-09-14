@@ -20,6 +20,8 @@ import { BlogComponent } from './blog/blog.component';
 import { DetailComponent } from './detail/detail.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScormComponent } from './scorm/scorm.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ScormComponent } from './scorm/scorm.component';
     CasestudyComponent,
     BlogComponent,
     DetailComponent,
-    ScormComponent
+    ScormComponent,
+    BlogDetailComponent,
+    CasestudyDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

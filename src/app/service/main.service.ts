@@ -18,8 +18,11 @@ export class MainService {
     title = title.split(":").join("-")
     title = title.split("(").join("-")
     title = title.split(")").join("-")
-    title = title.split(";").join("-")
-    return "/" + category + "/" + title  + "/" + item.id;
+    title = title.split(";").join("-");
+
+    let link = "/" + category + "/" + title  + "/" + item.id
+    // console.log("{ path: '"+link+"', component: BlogDetailComponent},")
+    return link;
   }
   casestudies = [
     {

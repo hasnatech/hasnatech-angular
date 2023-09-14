@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from '../service/main.service';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -12,10 +12,12 @@ export class DetailComponent {
   routeSub: any;
   data: any;
   list: any;
+  @Input() type = '';
   constructor(public service: MainService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
-      let type = params['type'];
+      // let type = params['type'];
+      let type = this.type;
 
       if (type == 'casestudy') {
         this.data = this.service.getCaseStudy(params['id']);

@@ -4,29 +4,22 @@ $primary: #049479;
   font-size: 15px;
   text-decoration: none;
   transition: all 0.5s ease;
-  // width: 116px;
-  // text-align: center;
   &.active {
     color: $primary;
   }
 }
 
-// .container {
-//   width: 1170px !important;
-// }
+.desktop_fit{
+  flex-grow: initial;
+}
 
 .nav-item a:hover {
   color: #049479;
 }
-.gap-5{
-gap: 3.8rem !important;
-}
+// .gap-5 {
+//   gap: 3.8rem !important;
+// }
 .menu_flex {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // width: 100%;
-  // position: relative;
 }
 
 .d-flex {
@@ -87,6 +80,7 @@ a {
   left: 0;
   top: 100%;
   background-color: #fff;
+  border-radius: 5px;
   padding: 15px;
   opacity: 0;
   box-shadow: 0px 5px 10px 5px rgba(81, 81, 81, 0.11);
@@ -98,10 +92,8 @@ a {
 }
 .dropdown-item {
   font-size: 16px;
-  margin-top: 5px;
-
+  margin-bottom: 10px;
 }
-
 
 .mobile {
   display: none !important;
@@ -112,43 +104,41 @@ a {
 }
 
 @media (max-width: 576px) {
-
   .desktop {
-      display: none !important;
+    display: none !important;
   }
 
   .mobile {
-      display: block !important;
+    display: block !important;
   }
 }
 
 @media (max-width: 768px) {
   .desktop {
-      display: none !important;
+    display: none !important;
   }
 
   .mobile {
-      display: block !important;
+    display: block !important;
   }
 }
 
 @media (max-width: 991px) {
   .desktop {
-      display: none !important;
+    display: none !important;
   }
 
   .mobile {
-      display: block !important;
+    display: block !important;
   }
 }
 
 @media (max-width: 1200px) {
   .desktop {
-      display: none !important;
+    display: none !important;
   }
 
   .mobile {
-      display: block !important;
+    display: block !important;
   }
 }
-

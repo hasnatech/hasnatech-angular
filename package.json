@@ -11,7 +11,7 @@
     "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/",
     "1preupload": "ng build --configuration production --base-href /",
     "deploy": "gh-pages -d dist/website",
-    "upload": "gh-pages -d dist/website/browser",
+    "render": "gh-pages -d dist/website/browser",
     "dev:ssr": "ng run website:serve-ssr",
     "serve:ssr": "node dist/website/server/main.js",
     "build:ssr": "ng build && ng run website:server",
