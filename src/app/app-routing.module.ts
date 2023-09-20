@@ -14,6 +14,8 @@ import { DetailComponent } from './detail/detail.component';
 import { ScormComponent } from './scorm/scorm.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.component';
+import { DataPolicyComponent } from './data-policy/data-policy.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -40,6 +42,8 @@ const routes: Routes = [
   { path: 'casestudy/rapid-video-development:-transforming-recruitment-training/2', component: CasestudyDetailComponent },
   { path: 'casestudy/a-cooling-challenge-game/3', component: CasestudyDetailComponent },
   { path: 'casestudy/transforming-supply-chain-training-with-gamification/4', component: CasestudyDetailComponent },
+  { path: 'policy/data', component: DataPolicyComponent },
+  { path: 'policy/cookies', component: CookiesPolicyComponent },
 ];
 
 @NgModule({

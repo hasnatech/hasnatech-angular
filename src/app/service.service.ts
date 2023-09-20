@@ -25,25 +25,7 @@ export class ServiceService {
   //   document.querySelector("#seventhpage")?.scrollIntoView({behavior:"smooth",block:"start"});
   //     }
   title = ""
-  aboutUs: any[] = [
 
-    {
-      "image": "assets/images/Icon_Set(11).png",
-      "heading": "LMS Implementation",
-      "paragraph": "Seamless integration of robust learning platforms for efficient knowledge delivery and employee growth."
-    },
-    {
-      "image": "assets/images/Icon_Set(20).png",
-      "heading": "Staff Augmentation",
-      "paragraph": "On-demand expertise to elevate projects, adapt to demands, and enhance team capabilities."
-    },
-    {
-      "image": "assets/images/Icon_Set(21).png",
-      "heading": "Custom Development",
-      "paragraph": "Tailored solutions powered by the latest technology, unlocking unique possibilities for growth and innovation."
-    }
-
-  ]
 
   staffAugmentation1: any[] = [
 
@@ -160,17 +142,20 @@ export class ServiceService {
     {
       "image": "assets/images/Icon_Set(11).png",
       "heading": "LMS Implementation",
-      "paragraph": "Seamless integration of robust learning platforms for efficient knowledge delivery and employee growth."
+      "paragraph": "Seamless integration of robust learning platforms for efficient knowledge delivery and employee growth.",
+      "link":'/service/learning-management-system'
     },
     {
       "image": "assets/images/Icon_Set(20).png",
       "heading": "Staff Augmentation",
-      "paragraph": "On-demand expertise to elevate projects, adapt to demands, and enhance team capabilities."
+      "paragraph": "On-demand expertise to elevate projects, adapt to demands, and enhance team capabilities.",
+      "link":'/service/staff-augmentation'
     },
     {
       "image": "assets/images/Icon_Set(21).png",
       "heading": "Custom Development",
-      "paragraph": "Tailored solutions powered by the latest technology, unlocking unique possibilities for growth and innovation."
+      "paragraph": "Tailored solutions powered by the latest technology, unlocking unique possibilities for growth and innovation.",
+      "link":'/service/custom-development'
     },
   ]
 

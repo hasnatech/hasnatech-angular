@@ -22,6 +22,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScormComponent } from './scorm/scorm.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.component';
+import { DataPolicyComponent } from './data-policy/data-policy.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.co
     DetailComponent,
     ScormComponent,
     BlogDetailComponent,
-    CasestudyDetailComponent
+    CasestudyDetailComponent,
+    DataPolicyComponent,
+    CookiesPolicyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
