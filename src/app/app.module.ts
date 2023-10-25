@@ -24,6 +24,8 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.component';
 import { DataPolicyComponent } from './data-policy/data-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,9 @@ import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.componen
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    // FormsModule,
+    ReactiveFormsModule,
     CarouselModule 
   ],
   providers: [],

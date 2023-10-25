@@ -1,12 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
 
-  constructor(private title: Title, private meta: Meta) { }
+  constructor(private title: Title, private meta: Meta, private router: Router, public api:ApiService) {
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        api.get('info/create').subscribe(data=>{console.log(data)});
+        // subscribing to NavigationEnd which is about to happen
+      }
+    });
+
+
+   }
+
+
+
   getCaseStudy(id: number) {
     return this.casestudies.filter(f => f.id == id)[0];
   }

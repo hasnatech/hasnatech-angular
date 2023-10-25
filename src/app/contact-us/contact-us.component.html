@@ -42,50 +42,109 @@
                 </div>
             </div>
             <div class="col-lg-6 brd-radius">
-                <form>
+
+                <form [formGroup]="employeeDetails" (ngSubmit)="submitForm()">
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-3">
+                            <label for="name" class="form-label"></label>
+                            <input type="text" class="form-control" [attr.disabled]="formSubmitted"
+                                [class.error]="employeeDetails.get('name').hasError('required') && (employeeDetails.get('name').touched || submit)"
+                                id="name" formControlName="name" placeholder="Name">
+                            <div class="text-danger ms-2 text-small"
+                                *ngIf="employeeDetails.get('name').hasError('required') && (employeeDetails.get('name').touched || submit)">
+                                {{ validationMessages.name.required }}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <label for="subject" class="form-label"></label>
+                            <input type="text" class="form-control" [attr.disabled]="formSubmitted"
+                                [class.error]="employeeDetails.get('subject').hasError('required') && (employeeDetails.get('subject').touched || submit)"
+                                id="subject" formControlName="subject" placeholder="Subject">
+                            <div class="text-danger ms-2 text-small"
+                                *ngIf="employeeDetails.get('subject').hasError('required') && (employeeDetails.get('subject').touched || submit)">
+                                {{ validationMessages.subject.required }}
+                            </div>
+                        </div>
+
+                    </div>
+
                     <div class="row">
                         <div class="col-lg-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label"></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="Name"
-                                aria-describedby="emailHelp" placeholder="Name">
+                            <label for="org" class="form-label"></label>
+                            <input type="" class="form-control" [attr.disabled]="formSubmitted"
+                                [class.error]="employeeDetails.get('org').hasError('required') && (employeeDetails.get('org').touched || submit)"
+                                id="org" formControlName="org" aria-describedby="emailHelp"
+                                placeholder="Organization Name">
+                            <div class="text-danger ms-2 text-small"
+                                *ngIf="employeeDetails.get('org').hasError('required') && (employeeDetails.get('org').touched || submit)">
+                                {{ validationMessages.org.required }}
+                            </div>
                         </div>
                         <div class="col-lg-6 mb-3">
-                            <label for="exampleInputEmail2" class="form-label"></label>
-                            <input type="subject" class="form-control" id="exampleInputEmail1" formControlName="Subject"
-                                aria-describedby="emailHelp" placeholder="Subject">
+                            <label for="mobile" class="form-label"></label>
+                            <input type="phone" class="form-control" [attr.disabled]="formSubmitted"
+                                [class.error]="employeeDetails.get('mobile').hasError('required') && (employeeDetails.get('mobile').touched || submit)"
+                                id="mobile" formControlName="mobile" placeholder="Mobile number">
+                            <div class="text-danger ms-2 text-small"
+                                *ngIf="employeeDetails.get('mobile').hasError('required') && (employeeDetails.get('mobile').touched || submit)">
+                                {{ validationMessages.mobile.required }}
+                            </div>
                         </div>
 
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="Email"
-                            aria-describedby="emailHelp" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"></label>
-                        <input type="" class="form-control" id="exampleInputEmail1" formControlName="Organization_Name"
-                            aria-describedby="emailHelp" placeholder="Organization Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"></label>
-                        <textarea type="" class="form-control space" id="exampleInputEmail1"
-                            formControlName="Your_Requirement" aria-describedby="emailHelp"
-                            placeholder="Your Requirement"></textarea>
+                        <label for="email" class="form-label"></label>
+                        <input type="email" class="form-control" [attr.disabled]="formSubmitted"
+                            [class.error]="employeeDetails.get('email').hasError('required') && (employeeDetails.get('email').touched || submit)"
+                            id="email" formControlName="email" placeholder="Email">
+                        <div class="text-danger ms-2 text-small"
+                            *ngIf="employeeDetails.get('email').hasError('required') && (employeeDetails.get('email').touched || submit)">
+                            {{ validationMessages.email.required }}
+                        </div>
+                        <div class="text-danger ms-2 text-small"
+                            *ngIf="employeeDetails.get('email').hasError('email') && (employeeDetails.get('email').touched || submit)">
+                            {{ validationMessages.email.email }}
+                        </div>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="req" class="form-label"></label>
+                        <textarea type="" class="form-control space" [attr.disabled]="formSubmitted"
+                            [class.error]="employeeDetails.get('req').hasError('required') && (employeeDetails.get('req').touched || submit)"
+                            id="req" formControlName="req" placeholder="Your Requirement"></textarea>
+                        <div class="text-danger ms-2 text-small"
+                            *ngIf="employeeDetails.get('req').hasError('required') && (employeeDetails.get('req').touched || submit)">
+                            {{ validationMessages.req.required }}
+                        </div>
+                    </div>
 
-                    <button type="submit" class="btn btn-dark">Send Message</button>
+                    <div *ngIf="submit && !employeeDetails.valid" class="alert alert-danger">
+                        <p class="text-small mb-0">{{errMsg}}</p>
+                    </div>
+
+                    <div *ngIf="submit && employeeDetails.valid && sucMsg != ''" class="alert alert-success">
+                        <p class="text-small mb-0">{{sucMsg}}</p>
+                    </div>
+
+                    <button type="submit" [hidden]="formSubmitted" class="btn btn-dark">
+
+                        <div *ngIf="loading" class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+
+                        Send Message
+                    </button>
                 </form>
             </div>
-
         </div>
 
     </div>
 </div>
 
-<div class="container">
-    <iframe [src]="mapsURL | safePipe" width="100%" height="315" frameborder="0" allowfullscreen webkitallowfullscreen
-        mozallowfullscreen>
-    </iframe>
-
-</div>
+<!-- <div class="container"> -->
+<iframe [src]="mapsURL | safePipe" width="100%" height="315" frameborder="0" allowfullscreen webkitallowfullscreen
+    mozallowfullscreen>
+</iframe>
+<!-- </div> -->
