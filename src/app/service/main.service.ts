@@ -9,17 +9,21 @@ import { ApiService } from './api.service';
 })
 export class MainService {
 
-  constructor(private title: Title, private meta: Meta, private router: Router, public api:ApiService) {
+  constructor(private title: Title, private meta: Meta, private router: Router, public api: ApiService) {
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        api.get('info/create').subscribe(data=>{console.log(data)});
+
+        let data = {
+          page: location.href
+        }
+        api.post('info/create', data).subscribe(data => { console.log(data) });
         // subscribing to NavigationEnd which is about to happen
       }
     });
 
 
-   }
+  }
 
 
 
@@ -36,7 +40,7 @@ export class MainService {
     title = title.split(")").join("-")
     title = title.split(";").join("-");
 
-    let link = "/" + category + "/" + title  + "/" + item.id
+    let link = "/" + category + "/" + title + "/" + item.id
     // console.log("{ path: '"+link+"', component: BlogDetailComponent},")
     return link;
   }
@@ -177,7 +181,7 @@ export class MainService {
       title: 'Transforming Supply Chain Training with Gamification',
       description: `Explore our award-winning journey in supply chain training. Discover how gamification transformed complex processes into an engaging learning experience, empowering employees and earning us the prestigious Branded Hall Award.`,
       img: 'assets/images/casestudy/casestudy_4.png',
-      content:`
+      content: `
     <h2>A Gamification Success Story</h2>
 
     <h2>The Challenge:</h2>
@@ -246,7 +250,7 @@ export class MainService {
     
      
       `,
-      
+
     },
     {
       id: 2,
@@ -312,8 +316,8 @@ export class MainService {
       title: 'Adaptive Learning: Tailoring Education for Individual Success',
       description: `Delve into the concept of adaptive learning and how it leverages technology to create customized learning paths, catering to diverse learner needs and abilities.`,
       img: 'assets/images/blog/blog_4.png',
-      content: 
-      `
+      content:
+        `
       <p>Education is not one-size-fits-all. Every learner is unique, with distinct strengths, weaknesses, and learning preferences. This is where adaptive learning steps in, reshaping the education landscape to cater to individual success.</p>
 
     <h2>Understanding Adaptive Learning</h2>
