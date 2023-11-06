@@ -15,6 +15,7 @@ export class MainService {
       if (event instanceof NavigationEnd) {
 
         let data = {
+          title: 'Website',
           page: location.href
         }
         api.post('info/create', data).subscribe(data => { console.log(data) });
