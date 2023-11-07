@@ -26,6 +26,7 @@ import { DataPolicyComponent } from './data-policy/data-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GamificationComponent } from './gamification/gamification.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogDetailComponent,
     CasestudyDetailComponent,
     DataPolicyComponent,
-    CookiesPolicyComponent
+    CookiesPolicyComponent,
+    GamificationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

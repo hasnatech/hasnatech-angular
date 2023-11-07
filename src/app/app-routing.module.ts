@@ -16,6 +16,7 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.component';
 import { DataPolicyComponent } from './data-policy/data-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
+import { GamificationComponent } from './gamification/gamification.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'service/learning-management-system', component: StaffAugmentationComponent },
   { path: 'service/staff-augmentation', component: StaffAugmentation1Component },
   { path: 'service/custom-development', component: CustomDevelopmentComponent },
+  { path: 'service/gamification', component: GamificationComponent },
   { path: 'service/scorm', component: ScormComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },

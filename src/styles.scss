@@ -45,6 +45,10 @@ h3 {
 a {
   color: $primary;
 }
+.bg-grn {
+  background-color: #049479;
+  color: #fff;
+}
 .btn {
   border-color: #049479;
   border-radius: 25px;
@@ -62,20 +66,20 @@ a {
     font-weight: 400;
   }
 }
-.cursor{
-  cursor:pointer
+.cursor {
+  cursor: pointer;
 }
 
-.video-responsive{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-  }
-  .video-responsive iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-  }
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

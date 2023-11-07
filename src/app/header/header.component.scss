@@ -9,7 +9,7 @@ $primary: #049479;
   }
 }
 
-.desktop_fit{
+.desktop_fit {
   flex-grow: initial;
 }
 
@@ -93,6 +93,9 @@ a {
 .dropdown-item {
   font-size: 16px;
   margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .mobile {
