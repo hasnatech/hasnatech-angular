@@ -17,10 +17,18 @@ import { CasestudyDetailComponent } from './casestudy-detail/casestudy-detail.co
 import { DataPolicyComponent } from './data-policy/data-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 import { GamificationComponent } from './gamification/gamification.component';
+import { WebDevelopmentComponent } from './web-development/web-development.component';
+import { LanguageTranslationComponent } from './language-translation/language-translation.component';
+import { VideoCreationComponent } from './video-creation/video-creation.component';
+import { AiServiceComponent } from './ai-service/ai-service.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'Header', component: HeaderComponent },
+  { path: 'service/web-development', component: WebDevelopmentComponent },
+  { path: 'service/video-creation', component: VideoCreationComponent },
+  { path: 'service/ai-service', component: AiServiceComponent },
+  { path: 'service/language-translation', component: LanguageTranslationComponent },
   { path: 'service/learning-management-system', component: StaffAugmentationComponent },
   { path: 'service/staff-augmentation', component: StaffAugmentation1Component },
   { path: 'service/custom-development', component: CustomDevelopmentComponent },

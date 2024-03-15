@@ -67,23 +67,23 @@ export class ServiceService {
   card2: any[] = [
     {
       "image1": "assets/images/Icon_Set(6).png",
-      "paragraph1": "We analyze your project needs and skill gaps."
+      "paragraph1": "Analyze project needs, identify skill gaps accurately."
     },
     {
       "image1": "assets/images/Icon_Set(7).png",
-      "paragraph1": "We analyze your project needs and skill gaps."
+      "paragraph1": "Customize staff plan to address specific requirements. "
     },
     {
       "image1": "assets/images/Icon_Set(8).png",
-      "paragraph1": "We analyze your project needs and skill gaps."
+      "paragraph1": "Source skilled professionals, ensure expertise and experience. "
     },
     {
       "image1": "assets/images/Icon_Set(9).png",
-      "paragraph1": "We analyze your project needs and skill gaps."
+      "paragraph1": "Ensure seamless integration, provide comprehensive onboarding. "
     },
     {
       "image1": "assets/images/Icon_Set(10).png",
-      "paragraph1": "We analyze your project needs and skill gaps."
+      "paragraph1": "Maintain support, monitor performance, adjust strategy accordingly. "
     },
   ]
 
@@ -141,9 +141,9 @@ export class ServiceService {
 
     {
       "image": "assets/images/Icon_Set(11).png",
-      "heading": "LMS Implementation",
-      "paragraph": "Seamless integration of robust learning platforms for efficient knowledge delivery and employee growth.",
-      "link":'/service/learning-management-system'
+      "heading": "Web Development ",
+      "paragraph": "Building dynamic web apps with latest technologies like React, Angular, etc for optimal performance and scalability. ",
+      "link":'/service/web-development'
     },
     {
       "image": "assets/images/Icon_Set(20).png",
@@ -153,9 +153,27 @@ export class ServiceService {
     },
     {
       "image": "assets/images/Icon_Set(21).png",
-      "heading": "Custom Development",
-      "paragraph": "Tailored solutions powered by the latest technology, unlocking unique possibilities for growth and innovation.",
+      "heading": "Learning and development ",
+      "paragraph": "Creating interactive e-learning experiences in 15 languages with AI translation, audio, and video capabilities. ",
       "link":'/service/custom-development'
+    },
+    {
+      "image": "assets/images/Icon_Set(21).png",
+      "heading": "Language Translation",
+      "paragraph": "Precision translation, localization, and multilingual content development for global audiences. ",
+      "link":'/service/language-translation'
+    },
+    {
+      "image": "assets/images/Icon_Set(21).png",
+      "heading": "Video Creation ",
+      "paragraph": "Tailored video solutions including product promotions, SaaS demos, and engaging explainer videos. ",
+      "link":'/service/video-creation'
+    },
+    {
+      "image": "assets/images/Icon_Set(21).png",
+      "heading": "AI Services ",
+      "paragraph": "Advanced AI-driven solutions for translation, audio narration, and video captioning, enhancing content accessibility and engagement. ",
+      "link":'/service/ai-service'
     },
   ]
 

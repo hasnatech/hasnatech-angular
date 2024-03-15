@@ -27,6 +27,10 @@ import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GamificationComponent } from './gamification/gamification.component';
+import { WebDevelopmentComponent } from './web-development/web-development.component';
+import { LanguageTranslationComponent } from './language-translation/language-translation.component';
+import { VideoCreationComponent } from './video-creation/video-creation.component';
+import { AiServiceComponent } from './ai-service/ai-service.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,11 @@ import { GamificationComponent } from './gamification/gamification.component';
     CasestudyDetailComponent,
     DataPolicyComponent,
     CookiesPolicyComponent,
-    GamificationComponent
+    GamificationComponent,
+    WebDevelopmentComponent,
+    LanguageTranslationComponent,
+    VideoCreationComponent,
+    AiServiceComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
