@@ -24,13 +24,24 @@
         <div class="col-lg-6">
           <div class="p-2">
             <div class="fnt-54 abs-txt pb-3">WHAT WE DO</div>
-            <p class="wht_txt">Welcome to Hasna Technology – A Singapore-based company, specialize in software development, cutting-edge eLearning solutions, and innovative software solutions that propel your business forward.</p>
+            <p class="wht_txt">Welcome to Hasna Technology – A Singapore-based company, specialize in software
+              development, cutting-edge eLearning solutions, and innovative software solutions that propel your business
+              forward.</p>
 
-              <p class="wht_txt">Our unwavering commitment to excellence ensures that every client receives bespoke technology solutions designed to meet their distinct requirements. Our extensive range of services spans web development, web design, e-commerce development, e-Learning solutions, software development, and mobile app development.</p>
-              
-              <p class="wht_txt">As seasoned navigators of the ever-evolving tech landscape, we provide expert consultation, guidance, and steadfast support to our clients, empowering them to elevate their financial performance through tailored services.</p>
-              
-              <p class="wht_txt">At Hasna Technology, we firmly believe in technology's transformative power, turning dreams into reality. We are on a mission to craft a more exquisite and technologically advanced world for our clients, where their ambitions can thrive with the latest in technological innovation. Embark on this transformative journey with us and turn your dreams into reality through the limitless possibilities of technology.</p>
+            <p class="wht_txt">Our unwavering commitment to excellence ensures that every client receives bespoke
+              technology solutions designed to meet their distinct requirements. Our extensive range of services spans
+              web development, web design, e-commerce development, e-Learning solutions, software development, and
+              mobile app development.</p>
+
+            <p class="wht_txt">As seasoned navigators of the ever-evolving tech landscape, we provide expert
+              consultation, guidance, and steadfast support to our clients, empowering them to elevate their financial
+              performance through tailored services.</p>
+
+            <p class="wht_txt">At Hasna Technology, we firmly believe in technology's transformative power, turning
+              dreams into reality. We are on a mission to craft a more exquisite and technologically advanced world for
+              our clients, where their ambitions can thrive with the latest in technological innovation. Embark on this
+              transformative journey with us and turn your dreams into reality through the limitless
+              possibilities of technology.</p>
           </div>
         </div>
         <div class="col-lg-6">
@@ -51,18 +62,22 @@
 
           <div class="flex d-flex align-items-center justify-content-around">
 
-            <div class="card" style="width: 18rem;" data-aos="fade-up" *ngFor="let item of this.service.homecard;">
+            <div class="card" style="width: 20rem;" data-aos="fade-up" *ngFor="let item of this.service.homecard;">
 
-              <div class="card-body">
-                <img class="" src="{{item.image}}">
-                <div class="hov-txt">
-                  <p class="card-head">{{item.heading}}</p>
+              <div class="card-body m-0 p-0">
+                <div class="icon_container"><img class="" src="{{item.image}}"></div>
+                <!-- <div class="hov-txt">  -->
+                <div class="header">
+                  <p class="card-head m-0">{{item.heading}}</p>
+                </div>
+                <div class="para">
                   <p class="card-text">{{item.paragraph}}</p>
-                  <div class="mt-2 mb-2">
-                    <div type="button" class="card-btn btn-primary btn-lg button1">
-                      <a routerLink="{{item.link}}" class="txt-dec">Learn More</a>
-                    </div>
+                </div>
+                <div class="button_container">
+                  <div type="button" class="card-btn btn-primary btn-lg button1">
+                    <a routerLink="{{item.link}}" class="txt-dec">Learn More</a>
                   </div>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
@@ -113,4 +128,4 @@
     </div>
   </div>
 </div>
-<app-action-link></app-action-link>  
+<app-action-link></app-action-link>

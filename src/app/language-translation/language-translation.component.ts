@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ServiceService } from '../service.service';
 import { MainService } from '../service/main.service';
 @Component({
   selector: 'app-language-translation',
@@ -7,7 +7,7 @@ import { MainService } from '../service/main.service';
   styleUrls: ['./language-translation.component.scss']
 })
 export class LanguageTranslationComponent {
-  constructor(public router: Router, main: MainService) {
-    main.setMeta("Learning Management System", 'A learning management system (LMS) is a piece of software that allows a business to store, manage, provide, and track all training-related materials.', 'assets/image/lms.png');
+  constructor(public service:ServiceService, main:MainService){
+    main.setMeta("Custom Development", "In the ever-evolving landscape of e-learning, we understand that one size doesn't fit all. That's why we offer a range of specialized services to meet your unique requirements", 'assets/image/custom-development.png');
   }
 }

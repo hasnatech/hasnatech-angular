@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -134,6 +135,189 @@ export class ServiceService {
       "image": "assets/images/Icon_Set(19).png",
       "heading": "BLENDED LEARNING",
       "paragraph": "Combine online and offline learning methods to create holistic educational experiences for learners."
+    },
+  ]
+
+  WebDevelopment: any[] = [
+
+    {
+      "image": "assets/images/Icon_Set(11).png",
+      "heading": "UI/UX Design",
+      "paragraph": "Crafting intuitive and visually appealing user experiences to enhance engagement and usability. "
+    },
+    {
+      "image": "assets/images/Icon_Set(12).png",
+      "heading": "Responsive Design",
+      "paragraph": "Ensuring optimal viewing experience across a wide range of devices and screen sizes. "
+    },
+    {
+      "image": "assets/images/Icon_Set(13).png",
+      "heading": "Security Measures",
+      "paragraph": "Implementing robust security protocols and measures to safeguard your web application from potential threats."
+    },
+    {
+      "image": "assets/images/Icon_Set(15).png",
+      "heading": "Frontend Development",
+      "paragraph": "Utilizing React, Angular, and Next.js for engaging and responsive user interfaces."
+    },
+    {
+      "image": "assets/images/Icon_Set(14).png",
+      "heading": "Backend Development",
+      "paragraph": "Expertise in Node.js, Python, C#, Laravel, and Nest.js for robust server-side solutions."
+    },
+    {
+      "image": "assets/images/Icon_Set(16).png",
+      "heading": "Mobile App Development",
+      "paragraph": "Extending web functionality to mobile platforms with cross-platform app development."
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Database Integration",
+      "paragraph": "Seamless integration of databases like MySQL, MongoDB, PostgreSQL for efficient data storage and retrieval."
+    },
+    {
+      "image": "assets/images/Icon_Set(18).png",
+      "heading": "CI/CD Integration:",
+      "paragraph": "Seamless integration of Continuous Integration and Continuous Deployment pipelines for efficient development workflows. "
+    },
+    {
+      "image": "assets/images/Icon_Set(19).png",
+      "heading": "Web Hosting and Maintenance:",
+      "paragraph": "Reliable hosting solutions and ongoing maintenance services to keep your web application running smoothly. "
+    },
+    {
+      "image": "assets/images/Icon_Set(19).png",
+      "heading": "Cloud Integration",
+      "paragraph": "Integration with cloud platforms such as AWS, Azure, and Google Cloud for scalability and flexibility. "
+    },
+  ]
+  Languagetranslation: any[] = [
+
+    
+    {
+      "image": "assets/images/Icon_Set(12).png",
+      "heading": "Professional Translation:",
+      "paragraph": "Our team of linguistic experts delivers accurate translation services for various content types, including documents, websites, and multimedia.  "
+    },
+    {
+      "image": "assets/images/Icon_Set(13).png",
+      "heading": "Localization",
+      "paragraph": "Tailoring content to specific cultural nuances and regional preferences, we ensure that your message resonates with local audiences worldwide.      "
+    },
+    {
+      "image": "assets/images/Icon_Set(15).png",
+      "heading": "Multilingual Content Creation:",
+      "paragraph": "From e-learning courses to marketing materials, we create engaging content in multiple languages to expand your global reach. "
+    },
+    {
+      "image": "assets/images/Icon_Set(14).png",
+      "heading": "AI-Powered Translation",
+      "paragraph": "Leveraging cutting-edge AI technology, we provide efficient and cost-effective translation solutions while maintaining linguistic integrity. "
+    },
+    {
+      "image": "assets/images/Icon_Set(16).png",
+      "heading": "Quality Assurance",
+      "paragraph": "Rigorous quality assurance processes guarantee flawless translations, adhering to industry standards and client requirements. "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Scalable Solutions",
+      "paragraph": "Whether you need translation for a single project or ongoing multilingual support, our scalable solutions can accommodate your needs. "
+    }
+  ]
+
+  Videocreation: any[] = [
+
+    
+    {
+      "image": "assets/images/Icon_Set(12).png",
+      "heading": "Custom Video Production",
+      "paragraph": "From concept development to final delivery, we offer end-to-end video production services, ensuring every aspect of your project is expertly crafted.  "
+    },
+    {
+      "image": "assets/images/Icon_Set(13).png",
+      "heading": "Product Promotion Videos",
+      "paragraph": "Showcase your products and services with dynamic promotional videos designed to capture attention and drive engagement. "
+    },
+    {
+      "image": "assets/images/Icon_Set(15).png",
+      "heading": "SaaS Product Demos",
+      "paragraph": "Highlight the features and benefits of your software solutions through compelling demo videos that educate and inspire. "
+    },
+    {
+      "image": "assets/images/Icon_Set(14).png",
+      "heading": "Explainer Videos",
+      "paragraph": "Simplify complex ideas and processes with engaging explainer videos that effectively communicate your message to your target audience. "
+    },
+    {
+      "image": "assets/images/Icon_Set(16).png",
+      "heading": "Presentation to Video Conversion",
+      "paragraph": "Transform your static presentations into dynamic video content that captivates viewers and enhances comprehension. "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Professional Editing",
+      "paragraph": "Our skilled editors refine your footage with precision, ensuring seamless transitions, captivating visuals, and polished final products. "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Creative Storytelling",
+      "paragraph": "We harness the power of storytelling to create compelling narratives that resonate with your audience and leave a lasting impression.  "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Customized Solutions",
+      "paragraph": "Whether you're a startup or a multinational corporation, we tailor our video services to meet your specific goals, budget, and timeline. "
+    },
+   
+  ]
+  AIservice: any[] = [
+
+    
+    {
+      "image": "assets/images/Icon_Set(12).png",
+      "heading": "AI Translation",
+      "paragraph": "Break down language barriers securely with our AI-driven translation services, ensuring confidentiality and accuracy in cross-cultural communication. "
+    },
+    {
+      "image": "assets/images/Icon_Set(13).png",
+      "heading": "AI Audio Recording",
+      "paragraph": "Safeguard sensitive audio content with our secure AI audio recording solutions, leveraging encryption protocols for data protection. "
+    },
+    {
+      "image": "assets/images/Icon_Set(15).png",
+      "heading": "Video Transcription",
+      "paragraph": "Ensure the privacy of your video content with our secure AI transcription services, incorporating encryption to safeguard sensitive information."
+    },
+    {
+      "image": "assets/images/Icon_Set(14).png",
+      "heading": "Video to Blog/Article Conversion",
+      "paragraph": "Protect your content integrity with our secure AI conversion tools, encrypting data during the conversion process to preserve confidentiality. "
+    },
+    {
+      "image": "assets/images/Icon_Set(16).png",
+      "heading": "Video to E-learning Course Structure",
+      "paragraph": "Maintain data privacy in e-learning initiatives with our secure AI course structuring services, implementing encryption and data deletion policies for compliance and confidentiality. "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Innovation and Expertise",
+      "paragraph": "With a deep understanding of AI technologies and their applications, we deliver innovative solutions that drive efficiency, productivity, and growth for our clients.  "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Custom AI Solutions",
+      "paragraph": "Build tailored AI solutions with security at their core, integrating encryption and data management practices to protect sensitive information and ensure regulatory compliance.   "
+    },
+    {
+      "image": "assets/images/Icon_Set(17).png",
+      "heading": "Data Security Measures",
+      "paragraph": "We prioritize data security, implementing encryption protocols and data deletion policies to protect your information throughout its lifecycle, ensuring compliance with privacy regulations.   "
+    },
+     {
+      "image": "assets/images/Icon_Set(14).png",
+      "heading": "Scalable and Reliable",
+      "paragraph": "Our AI services are scalable and reliable, designed to meet your evolving needs while maintaining the highest standards of data security and integrity. "
     },
   ]
 

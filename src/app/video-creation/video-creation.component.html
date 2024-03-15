@@ -4,76 +4,49 @@
             Video Creation
         </div>
     </div>
-    <div class="container mt-5 mb-4">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="bold-txt"> Elevating Your Brand with Engaging Video Content </div>
-                <!-- <div class="bold-txt"> What is a <span class="clr_grn">Learning Management System?</span></div> -->
-                <!-- <p class="mt-4">
-                    A learning management system (LMS) is a piece of software <br>that allows a business to store,
-                    manage, provide,
-                    and track all training-related materials.
-                </p> -->
-                <div class="bg-grn mt-4 mb-4">
-                    <h4 class="bold">Learning management systems allow HR personnel and business owners to:</h4>
-                    <ul class="mt-4">
-                        <li class="mt-2">Oversee training and e-learning throughout <br>the business</li>
-                        <li class="mt-2">Training for new employees</li>
-                        <li class="mt-2">Set and manage employee goals</li>
-                        <li class="mt-2">Track individual progress</li>
-                        <li class="mt-2">View detailed analytics</li>
-                        <li class="mt-2">Identify skills gaps</li>
-                        <li class="mt-2">Present data</li>
-                    </ul>
+
+    <div class="container">
+        <div class="clr_grn1 mt-5">
+            Elevating Your Brand with Engaging Video Content
+        </div>
+        <p class="mt-4">
+            At Hasna Technology, we specialize in creating captivating video content tailored to your unique needs,
+            helping you stand out in today's digital landscape.
+
+        </p>
+    </div>
+
+    <div class="container mt-3 mb-5">
+        <div class="d-flex1 mt-4 ">
+            <div class=" wrap flex d-flex  justify-content-center">
+                <div class="card" style="width: 18rem;" data-aos="fade-up"
+                    *ngFor="let item of this.service.Videocreation;">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <div>
+                            <img class="" src="{{item.image}}">
+                        </div>
+                        <div>
+                            <p class="mt-2 card-head">{{item.heading}}</p>
+                        </div>
+
+                        <div>
+                            <p class="card-text">{{item.paragraph}}</p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <img class="img-fluid" alt="Management System" src="assets/images/s1.png">
+
             </div>
         </div>
     </div>
 
-    <div class="mt-5 container">
-        <p>
-            At Hasna Technology, we specialize in creating captivating video content tailored to your unique needs,
-            helping you stand out in today's digital landscape.
-        </p>
-        <ol>
-            <li class="mt-4"><b>Custom Video Production:</b> From concept development to final delivery, we offer
-                end-to-end video production services, ensuring every aspect of your project is expertly crafted.
-            </li>
-            <li class="mt-3"><b>Product Promotion Videos:</b> Showcase your products and services with dynamic
-                promotional videos designed to capture attention and drive engagement.
-            </li>
-            <li class="mt-3"><b>SaaS Product Demos:</b> Highlight the features and benefits of your software solutions
-                through compelling demo videos that educate and inspire.
-            </li>
-            <li class="mt-3"><b>Explainer Videos:</b> Simplify complex ideas and processes with engaging explainer
-                videos that effectively communicate your message to your target audience.
-            </li>
-            <li class="mt-3"><b>Presentation to Video Conversion:</b> Transform your static presentations into dynamic
-                video content that captivates viewers and enhances comprehension.
-            </li>
-            <li class="mt-3"><b>Professional Editing:</b> Our skilled editors refine your footage with precision,
-                ensuring seamless transitions, captivating visuals, and polished final products.
-            </li>
-            <li class="mt-3"><b>Creative Storytelling:</b> We harness the power of storytelling to create compelling
-                narratives that resonate with your audience and leave a lasting impression.
-            </li>
-            <li class="mt-3"><b>Customized Solutions:</b> Whether you're a startup or a multinational corporation, we
-                tailor our video services to meet your specific goals, budget, and timeline.
-            </li>
+    <p class="mt-4 container">
+        Let us help you bring your vision to life with our innovative video creation services. Stand out, engage, and
+        inspire with Hasna Technology.
 
 
+    </p>
 
-        </ol>
-        <p class="mt-3">
-            Let us help you bring your vision to life with our innovative video creation services. Stand out, engage,
-            and inspire with Hasna Technology.
-
-
-        </p>
-    </div>
     <app-action-link></app-action-link>
-
 </div>
