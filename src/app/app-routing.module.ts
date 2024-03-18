@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'service/language-translation', component: LanguageTranslationComponent },
   { path: 'service/learning-management-system', component: StaffAugmentationComponent },
   { path: 'service/staff-augmentation', component: StaffAugmentation1Component },
-  { path: 'service/custom-development', component: CustomDevelopmentComponent },
+  { path: 'service/learning-development', component: CustomDevelopmentComponent },
   { path: 'service/gamification', component: GamificationComponent },
   { path: 'service/scorm', component: ScormComponent },
   { path: 'about-us', component: AboutUsComponent },

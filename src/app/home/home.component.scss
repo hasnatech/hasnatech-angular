@@ -1,7 +1,6 @@
 $primary: #049479;
 
 .section-1 {
-
   .landing_sec {
     margin: 0;
     color: #818181;
@@ -22,7 +21,10 @@ $primary: #049479;
     color: #049479;
   }
 }
-
+.icons {
+  // width: 100px;
+  height: 74px;
+}
 .section-2 {
   .bg-clr {
     background-color: #049479;
@@ -116,7 +118,6 @@ $primary: #049479;
       height: 28%;
       padding: 30px;
     }
-
   }
 
   .d-flex {
@@ -145,24 +146,16 @@ $primary: #049479;
   }
 }
 
-
-
 .d-flex-5 {
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-
-
 .middle {
   max-width: 1366px;
   margin: 0 auto;
 }
-
-
-
-
 
 .fnt-18 {
   font-size: 18px;
@@ -202,14 +195,10 @@ $primary: #049479;
   padding: 0px 20px;
 }
 
-
 .wrap {
   flex-wrap: wrap;
   gap: 30px;
 }
-
-
-
 
 .space_wht {
   height: 90px;
@@ -219,14 +208,10 @@ $primary: #049479;
 //     position: relative;
 // }
 
-
-
 .bg-gry {
   background-color: #f5f5f5;
   padding-bottom: 50px;
 }
-
-
 
 .black_box {
   background-color: #333333;
