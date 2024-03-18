@@ -1,7 +1,6 @@
 $primary: #049479;
 
 .section-1 {
-
   .landing_sec {
     margin: 0;
     color: #818181;
@@ -22,7 +21,10 @@ $primary: #049479;
     color: #049479;
   }
 }
-
+.icons {
+  // width: 100px;
+  height: 74px;
+}
 .section-2 {
   .bg-clr {
     background-color: #049479;
@@ -116,7 +118,6 @@ $primary: #049479;
       height: 28%;
       padding: 30px;
     }
-
   }
 
   .d-flex {
@@ -145,24 +146,16 @@ $primary: #049479;
   }
 }
 
-
-
 .d-flex-5 {
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-
-
 .middle {
   max-width: 1366px;
   margin: 0 auto;
 }
-
-
-
-
 
 .fnt-18 {
   font-size: 18px;
@@ -174,6 +167,7 @@ $primary: #049479;
   background: linear-gradient(104deg, #049479 0%, #00accc 100%);
   padding: 11px 22px;
   width: 195px;
+  
 
   .txt-dec {
     text-decoration: none;
@@ -185,6 +179,12 @@ $primary: #049479;
     font-size: 20px;
     font-weight: 400;
   }
+}
+.card-btn:hover {
+  background: linear-gradient(104deg, #037663 0%, #0099b9 100%); /* Darker shade */
+}
+.btn:hover{
+  background: linear-gradient(104deg, #037663 0%, #0099b9 100%); /* Darker shade */
 }
 
 .btn {
@@ -202,14 +202,10 @@ $primary: #049479;
   padding: 0px 20px;
 }
 
-
 .wrap {
   flex-wrap: wrap;
   gap: 30px;
 }
-
-
-
 
 .space_wht {
   height: 90px;
@@ -219,14 +215,10 @@ $primary: #049479;
 //     position: relative;
 // }
 
-
-
 .bg-gry {
   background-color: #f5f5f5;
   padding-bottom: 50px;
 }
-
-
 
 .black_box {
   background-color: #333333;
@@ -455,7 +447,7 @@ $primary: #049479;
   background: black;
   display: inline-block;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 50%; 
   height: 50px;
   width: 50px;
   justify-content: center;

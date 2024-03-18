@@ -337,29 +337,29 @@ export class ServiceService {
     },
     {
       "image": "assets/images/Icon_Set(21).png",
-      "heading": "Learning and development ",
+      "heading": "Learning and Development ",
       "paragraph": "Creating interactive e-learning experiences in 15 languages with AI translation, audio, and video capabilities. ",
-      "link":'/service/custom-development'
+      "link":'/service/learning-development'
     },
     {
-      "image": "assets/images/Icon_Set(21).png",
+      "image": "assets/images/language_icon.svg",
       "heading": "Language Translation",
       "paragraph": "Precision translation, localization, and multilingual content development for global audiences. ",
       "link":'/service/language-translation'
     },
     {
-      "image": "assets/images/Icon_Set(21).png",
+      "image": "assets/images/video_icon.svg",
       "heading": "Video Creation ",
       "paragraph": "Tailored video solutions including product promotions, SaaS demos, and engaging explainer videos. ",
       "link":'/service/video-creation'
     },
     {
-      "image": "assets/images/Icon_Set(21).png",
+      "image": "assets/images/ai_icon.png",
       "heading": "AI Services ",
       "paragraph": "Advanced AI-driven solutions for translation, audio narration, and video captioning, enhancing content accessibility and engagement. ",
       "link":'/service/ai-service'
     },
-  ]
+  ] 
 
 
 }
