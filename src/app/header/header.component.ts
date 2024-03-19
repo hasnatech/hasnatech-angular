@@ -12,13 +12,19 @@ export class HeaderComponent {
   constructor(public service: ServiceService,public router: Router) { }
 
 
-  showDrop = false
+  // showDrop = false
 
   down() {
     this.showDrop = true
   }
   leave() {
     this.showDrop = false
+  }
+
+  showDrop: boolean = false;
+
+  toggleDropdown() {
+      this.showDrop = !this.showDrop;
   }
 
 }
