@@ -20,7 +20,7 @@ jobs:
         server: ftp.c3dezign.com
         username: admin@hasnatech.com
         password: nP^OcO{q4p]U
-        local-dir: ./dist/website/browser/
+        local-dir: /dist/website/browser/
         remote-dir: /public_html/hasnatechcom/
 
 # ftp.c3dezign.com
