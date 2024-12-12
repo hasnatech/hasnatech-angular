@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getHeaders() {
     return new HttpHeaders({
@@ -27,4 +27,11 @@ export class ApiService {
     return this.httpClient.get(this.url + endpoint);
   }
 
+  getBlogBySlug(slug: string) {
+    return this.httpClient.get(`${this.url}blog/${slug}`);
+  }
+
+  // getRelatedBlogs(slug: string) {
+  //   return this.httpClient.get(`${this.url}blog/${slug}`);
+  // }
 }

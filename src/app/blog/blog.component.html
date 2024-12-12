@@ -22,21 +22,38 @@
             </div>
         </div>
     </div> -->
-     <div class="row mb-3">
-        <div class="col-lg-6 mt-5 bg" routerLink="{{service.getLink(item, 'blog')}}" *ngFor="let item of service.blogs">
+    <div class="row mb-3">
+        <!-- <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'blog')}}" *ngFor="let item of mainService.blogs">
             <div class="row_container shadow-lg">
                 <div class="row_header">
-                     <!-- <img class="img-fluid" src="{{item.img}}" alt="{{item.title}}"> -->
+                     <!- - <img class="img-fluid" src="{{item.img}}" alt="{{item.title}}"> - ->
                 </div>
                 <div class="row_body p-3">
                     <h3 [innerHTML]="item.title"></h3>
                     <p [innerHTML]="item.description"></p>
                 </div>
                 <div class="row_footer p-3">
-                    <a routerLink="{{service.getLink(item, 'blog')}}" >Learn more</a>
+                    <a routerLink="{{mainService.getLink(item, 'blog')}}" >Learn more</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'blog')}}"
+            *ngFor="let item of blogs">
+            <div class="row_container shadow-lg">
+                <div class="row_header">
+                    <img class="img-fluid" src="{{imgPreText}}{{item.image}}" alt="{{item.title}}">
+                </div>
+                <div class="row_body p-3">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="row_footer p-3">
+                    <a routerLink="{{mainService.getLink(item, 'blog')}}">Learn more</a>
                 </div>
             </div>
         </div>
+
     </div>
     <app-action-link></app-action-link>
 </div>
