@@ -22,7 +22,8 @@ import { LanguageTranslationComponent } from './language-translation/language-tr
 import { VideoCreationComponent } from './video-creation/video-creation.component';
 import { AiServiceComponent } from './ai-service/ai-service.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'Header', component: HeaderComponent },
   { path: 'service/web-development', component: WebDevelopmentComponent },
@@ -41,7 +42,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:slug', component: BlogDetailComponent},
   { path: 'blog/:title/:id', component: BlogDetailComponent },
-  { path: 'casestudy/:title/:id', component:  CasestudyDetailComponent},
+  { path: 'casestudy/:title/:id', component: CasestudyDetailComponent },
   { path: ':type/:title/:id', component: DetailComponent },
   { path: 'blog/embracing-the-future--top-elearning-trends-for-2023/1', component: BlogDetailComponent },
   { path: 'blog/unlocking-the-power-of-learning-management-systems--lms-/2', component: BlogDetailComponent },
