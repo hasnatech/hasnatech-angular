@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainService } from './service/main.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { MainService } from './service/main.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'website';
 
   constructor(private mainService: MainService) {}
@@ -16,7 +16,7 @@ export class AppComponent {
     this.mainService.setMeta(
       'Home Page',
       'Welcome to Hasna Technology. Explore our amazing services.',
-      'assets/homepage-image.jpg'
+      'assets/images/src/assets/images/hasna_tech_wh.png'
     );
   }
 
