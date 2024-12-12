@@ -54,11 +54,11 @@ export class DetailComponent {
               if (response.related && response.blog) {
                 this.blog = Array.isArray(response.blog) ? response.blog : [response.blog];
                 this.relatedBlog = Array.isArray(response.related) ? response.related : [response.related];
-                console.log("Related Blogs data fetched", this.relatedBlog);
-                this.relatedBlog.forEach(related => {
-                  console.log(related.title);
+                // console.log("Related Blogs data fetched", this.relatedBlog);
+                // this.relatedBlog.forEach(related => {
+                //   console.log(related.title);
 
-                })
+                // })
 
                 this.data = this.getBlog(slug);
 
@@ -90,14 +90,13 @@ export class DetailComponent {
   }
 
   getBlog(slug: string) {
-    // Ensure you're returning the first blog object matching the slug
     return this.blog.find((f) => f.slug === slug);
   }
 
-  ngOnDestroy() {
-    if (this.routeSub) {
-      this.routeSub.unsubscribe();
-    }
-  }
+  // ngOnDestroy() {
+  //   if (this.routeSub) {
+  //     this.routeSub.unsubscribe();
+  //   }
+  // }
 
 }

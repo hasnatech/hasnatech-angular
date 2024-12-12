@@ -23,15 +23,11 @@ export class ApiService {
     return this.httpClient.post(this.url + endpoint, data);
   }
 
-  get(endpoint: string) {
+  getBlog(endpoint: string) {
     return this.httpClient.get(this.url + endpoint);
   }
 
   getBlogBySlug(slug: string) {
     return this.httpClient.get(`${this.url}blog/${slug}`);
   }
-
-  // getRelatedBlogs(slug: string) {
-  //   return this.httpClient.get(`${this.url}blog/${slug}`);
-  // }
 }

@@ -100,3 +100,14 @@ h1 {
 
 //   }
 // }
+
+.truncated_text {
+  display: -webkit-box;         /* Required for line-clamping */
+  -webkit-box-orient: vertical; /* Sets the box's orientation to vertical */
+  overflow: hidden;            /* Hides overflow content */
+  text-overflow: ellipsis;     /* Adds ellipsis (...) at the end of the text */
+  -webkit-line-clamp: 3;       /* Number of lines to show */
+  max-height: calc(1.5em * 3); /* Optional: Height calculation for compatibility */
+  line-height: 1.5;            /* Adjust line height */
+}
+

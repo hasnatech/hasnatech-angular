@@ -478,11 +478,26 @@ export class MainService {
   ]
 
 
-  setMeta(t: string, desc: string, image: string) {
-    this.title.setTitle("Hasna Technology | " + t)
-    this.meta.addTag({ "og:title": t });
-    this.meta.addTag({ "og:description": desc });
-    this.meta.addTag({ "og:image": location.origin + "/" + image });
-    this.meta.addTag({ "og:url": location.href });
+  // setMeta(t: string, desc: string, image: string) {
+  //   this.title.setTitle("Hasna Technology | " + t)
+  //   this.meta.addTag({ "og:title": t });
+  //   this.meta.addTag({ "og:description": desc });
+  //   this.meta.addTag({ "og:image": location.origin + "/" + image });
+  //   this.meta.addTag({ "og:url": location.href });
+  // }
+
+  setMeta(title: string, description: string, image: string): void {
+    const fullTitle = `Hasna Technology | ${title}`;
+    this.title.setTitle(fullTitle);
+
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ property: 'og:title', content: fullTitle });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ property: 'og:image', content: `${location.origin}/${image}` });
+    this.meta.updateTag({ property: 'og:url', content: location.href });
+    this.meta.updateTag({ name: 'twitter:title', content: fullTitle });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
+    this.meta.updateTag({ name: 'twitter:image', content: `${location.origin}/${image}` });
   }
+
 }

@@ -10,7 +10,8 @@ import { ApiService } from '../service/api.service';
 export class BlogComponent implements OnInit {
 
   blogs: any[] = [];
-  imgPreText = 'https://website.hasnatech.tech/storage/' 
+  pagination: any = {};
+  imgPreText = 'https://website.hasnatech.tech/storage/';
 
   constructor(
     private apiService: ApiService,
@@ -20,20 +21,33 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getBlogs();
-    console.log(this.blogs);
-    
+    this.getBlogs(); // Load initial page
   }
 
-  getBlogs() {
-    this.apiService.get('blogs').subscribe({
+  // Fetch blogs with pagination
+  getBlogs(pageUrl: string = 'blogs') {
+    this.apiService.getBlog(pageUrl).subscribe({
       next: (data: any) => {
         this.blogs = data.data;
+        this.pagination = {
+          current_page: data.current_page,
+          prev_page_url: data.prev_page_url,
+          next_page_url: data.next_page_url,
+          links: data.links,
+        };
       },
-      error(err) {
+      error: (err) => {
         console.error('Error fetching blogs', err);
       }
-    })
+    });
+  }
+
+  // Handle page change
+  changePage(url: string | null) {
+    if (url) {
+      const relativeUrl = url.replace(this.apiService.url, ''); // Convert to relative URL
+      this.getBlogs(relativeUrl);
+    }
   }
 
 }
