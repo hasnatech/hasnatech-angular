@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { ApiService } from './api.service';
 
@@ -8,8 +8,9 @@ import { ApiService } from './api.service';
   providedIn: 'root'
 })
 export class MainService {
+  blog: any;
 
-  constructor(private title: Title, private meta: Meta, private router: Router, public api: ApiService) {
+  constructor(private title: Title, private meta: Meta, private router: Router, public apiService: ApiService, private route: ActivatedRoute,) {
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -18,7 +19,7 @@ export class MainService {
           title: 'Website',
           page: location.href
         }
-        api.post('info/create', data).subscribe(data => { console.log(data) });
+        apiService.post('info/create', data).subscribe(data => { console.log(data) });
         // subscribing to NavigationEnd which is about to happen
       }
     });
@@ -34,16 +35,28 @@ export class MainService {
   getBlog(id: number) {
     return this.blogs.filter(f => f.id == id)[0];
   }
-  getLink(item: any, category: string) {
-    let title = item.title.toLowerCase().split(" ").join("-")
-    title = title.split(":").join("-")
-    title = title.split("(").join("-")
-    title = title.split(")").join("-")
-    title = title.split(";").join("-");
 
-    let link = "/" + category + "/" + title + "/" + item.id
-    // console.log("{ path: '"+link+"', component: BlogDetailComponent},")
-    return link;
+
+
+
+  getLink(item: any, category: string) {
+    // let title = item.slug.toLowerCase().split(" ").join("-")
+    // title = title.split(":").join("-")
+    // title = title.split("(").join("-")
+    // title = title.split(")").join("-")
+    // title = title.split(";").join("-");
+
+    // let link = "/" + category + "/" + title + "/" + item.id
+    // // console.log("{ path: '"+link+"', component: BlogDetailComponent},")
+    // return link;
+
+
+    const title = item.slug
+        .toLowerCase()
+        .replace(/[\s:;()]+/g, '-'); // Replace spaces, colons, semicolons, and parentheses with a dash
+
+    return `/${category}/${title}`;
+
   }
   casestudies = [
     {
