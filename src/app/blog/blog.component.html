@@ -41,9 +41,13 @@
         </div>
 
         <!-- Pagination -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-end mt-4">
-                <li class="page-item" [class.disabled]="!pagination.prev_page_url">
+        <nav aria-label="Page navigation example" *ngIf="pagination.length > 3">
+            <ul class="pagination justify-content-end mt-4 gap-1">
+                <li *ngFor="let link of pagination">
+                    <a class="page-link rounded" routerLink="{{'/blog?page='+ link.label }}" *ngIf="link.url != null" [innerHTML]="link.label"></a>
+                        <!-- <span aria-hidden="true"><img src="assets/images/arrow_left.svg" alt=""></span> -->
+                </li>
+                <!-- <li class="page-item" [class.disabled]="!pagination.prev_page_url">
                     <a class="page-link" (click)="changePage(pagination.prev_page_url)" aria-label="Previous">
                         <span aria-hidden="true"><img src="assets/images/arrow_left.svg" alt=""></span>
                     </a>
@@ -55,7 +59,7 @@
                     <a class="page-link" (click)="changePage(pagination.next_page_url)" aria-label="Next">
                         <span aria-hidden="true"><img src="assets/images/arrow_right.svg" alt=""></span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 

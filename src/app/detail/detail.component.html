@@ -1,4 +1,5 @@
-<div class="bg_img">
+<div class="bg_img" >
+<!-- [style]="{'background-image': 'url(' + this.image_url + data.image + ')'}"> -->
     <h1 class="container text-white">
         {{data.title}}
     </h1>
@@ -6,7 +7,7 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-8">
-            <div [innerHTML]="data.content"></div>
+            <div class="me-5 pe-5" [innerHTML]="data.content"></div>
         </div>
         <div class="col-md-4">
             <!-- <div class="list_clr" [innerHTML]="list"> -->
@@ -15,7 +16,7 @@
                 <div *ngFor="let blog of this.relatedBlog" class="shadow mb-5 bg-white rounded">
                     <img [src]="this.image_url + blog.image" alt="{{ blog.title }}" class="img-fluid" />
                     <div class="p-3">
-                    <a class="hover:underline normal" [routerLink]="['/detail', blog.id]">{{ blog.title }}</a>
+                    <a class="hover:underline normal" [routerLink]="['/blog', blog.slug]">{{ blog.title }}</a>
                 </div>
                 </div>
             </div>
