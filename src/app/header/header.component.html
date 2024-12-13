@@ -1,10 +1,11 @@
 <div class="desktop">
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container bg-white">
-      <!-- <div class="menu_flex"> -->
       <div class="d-flex me-5 justify-content-between">
         <div>
-          <a routerLink="/" class="logo navbar-brand"> <img src="assets/images/logo.png" alt="logo"></a>
+          <a routerLink="/" class="logo navbar-brand">
+            <img src="assets/images/logo.png" alt="logo">
+          </a>
         </div>
         <div class="clr_1">HASNA TECHNOLOGY</div>
       </div>
@@ -13,92 +14,29 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse desktop_fit" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex  gap-4">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-4">
           <li class="nav-item">
             <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
-
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
           </li>
-
-          <!-- <li class="nav-item dropdown" (mouseover)="down()" (mouseleave)="leave()">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              routerLinkActive="active" aria-expanded="false">
-              Services
-            </a>
-            <div class="dropdown_menu " [class.block]="showDrop == true">
-              <div>
-                <a class="dropdown-item" routerLink="/service/web-development" routerLinkActive="active"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Web Development</a>
-
-                <a class="dropdown-item" routerLink="/service/staff-augmentation" routerLinkActive="active"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Staff
-                Augmentation</a>
-
-                <a class="dropdown-item" routerLink="/service/learning-development" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning & 
-                  Development</a>
-
-                <a class="dropdown-item" routerLink="/service/learning-management-system" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning Management System</a>
-             
-                  <a class="dropdown-item" routerLink="/service/video-creation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Video Creations</a>
-
-                  <a class="dropdown-item" routerLink="/service/language-translation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Language Translation</a>
-
-                <a class="dropdown-item" routerLink="/service/gamification" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Gamification</a>
-
-                <a class="dropdown-item" routerLink="/service/scorm" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">SCORM Standard</a>
-
-                  <a class="dropdown-item" routerLink="/service/ai-service" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">AI Services</a>
-              </div>
-
-            </div>
-          </li> -->
           <li class="nav-item dropdown" (click)="toggleDropdown()" (mouseover)="down()" (mouseleave)="leave()">
             <a class="nav-link dropdown-toggle" href="#" role="button" routerLinkActive="active" aria-expanded="false">
-                Services
+              Services
             </a>
             <div class="dropdown_menu" [class.block]="showDrop">
-                <div>
-                    <a class="dropdown-item" routerLink="/service/web-development" routerLinkActive="active">
-                        Web Development
-                    </a>
-                    <a class="dropdown-item" routerLink="/service/staff-augmentation" routerLinkActive="active">
-                        Staff Augmentation
-                    </a>
-                     <a class="dropdown-item" routerLink="/service/learning-development" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning & 
-                  Development</a>
-
-                <a class="dropdown-item" routerLink="/service/learning-management-system" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning Management System</a>
-             
-                  <a class="dropdown-item" routerLink="/service/video-creation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Video Creations</a>
-
-                  <a class="dropdown-item" routerLink="/service/language-translation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Language Translation</a>
-
-                <a class="dropdown-item" routerLink="/service/gamification" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Gamification</a>
-
-                <a class="dropdown-item" routerLink="/service/scorm" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">SCORM Standard</a>
-
-                  <a class="dropdown-item" routerLink="/service/ai-service" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">AI Services</a>
-                    <!-- Add more dropdown items here -->
-                </div>
+              <a class="dropdown-item" routerLink="/service/web-development" routerLinkActive="active">Web Development</a>
+              <a class="dropdown-item" routerLink="/service/staff-augmentation" routerLinkActive="active">Staff Augmentation</a>
+              <a class="dropdown-item" routerLink="/service/learning-development" routerLinkActive="active">Learning & Development</a>
+              <a class="dropdown-item" routerLink="/service/learning-management-system" routerLinkActive="active">Learning Management System</a>
+              <a class="dropdown-item" routerLink="/service/video-creation" routerLinkActive="active">Video Creations</a>
+              <a class="dropdown-item" routerLink="/service/language-translation" routerLinkActive="active">Language Translation</a>
+              <a class="dropdown-item" routerLink="/service/gamification" routerLinkActive="active">Gamification</a>
+              <a class="dropdown-item" routerLink="/service/scorm" routerLinkActive="active">SCORM Standard</a>
+              <a class="dropdown-item" routerLink="/service/ai-service" routerLinkActive="active">AI Services</a>
             </div>
-        </li>
-
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/pricing" routerLinkActive="active">Pricing</a>
           </li>
@@ -113,7 +51,6 @@
           </li>
         </ul>
       </div>
-      <!-- </div> -->
     </div>
   </nav>
 </div>
@@ -121,10 +58,11 @@
 <div class="mobile">
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container bg-white">
-      <!-- <div class="menu_flex"> -->
       <div class="d-flex justify-content-between">
         <div>
-          <a routerLink="/home" class="logo navbar-brand"> <img src="assets/images/logo.png" alt="logo"></a>
+          <a routerLink="/" class="logo navbar-brand">
+            <img src="assets/images/logo.png" alt="logo">
+          </a>
         </div>
         <div class="clr_1 mx-2">HASNA TECHNOLOGY</div>
       </div>
@@ -133,57 +71,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse desktop_fit" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active" data-bs-toggle="collapse"
+            <a class="nav-link" routerLink="/" routerLinkActive="active" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent">Home</a>
-
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/about-us" routerLinkActive="active" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent">About Us</a>
           </li>
-
           <li class="nav-item dropdown" (mouseover)="down()" (mouseleave)="leave()">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              routerLinkActive="active" aria-expanded="false">
-              Services
-            </a>
-            <div class="dropdown_menu " [class.block]="showDrop == true">
-              <div> 
-                <a class="dropdown-item" routerLink="/service/web-development" routerLinkActive="active"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Web Development</a>
-
-                <a class="dropdown-item" routerLink="/service/staff-augmentation" routerLinkActive="active"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Staff
-                Augmentation</a>
-
-                <a class="dropdown-item" routerLink="/service/learning-development" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning &  
-                  Development</a>
-
-                <a class="dropdown-item" routerLink="/service/learning-management-system" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Learning Management System</a>
-             
-                  <a class="dropdown-item" routerLink="/service/video-creation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Video Creations</a>
-
-                  <a class="dropdown-item" routerLink="/service/language-translation" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Language Translation</a>
-
-                <a class="dropdown-item" routerLink="/service/gamification" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Gamification</a>
-
-                <a class="dropdown-item" routerLink="/service/scorm" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">SCORM Standard</a>
-
-                  <a class="dropdown-item" routerLink="/service/ai-service" routerLinkActive="active"
-                  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">AI Services</a>
-              </div>
-
+              routerLinkActive="active" aria-expanded="false">Services</a>
+            <div class="dropdown_menu" [class.block]="showDrop == true">
+              <a class="dropdown-item" routerLink="/service/web-development" routerLinkActive="active">Web Development</a>
+              <a class="dropdown-item" routerLink="/service/staff-augmentation" routerLinkActive="active">Staff Augmentation</a>
+              <a class="dropdown-item" routerLink="/service/learning-development" routerLinkActive="active">Learning & Development</a>
+              <a class="dropdown-item" routerLink="/service/learning-management-system" routerLinkActive="active">Learning Management System</a>
+              <a class="dropdown-item" routerLink="/service/video-creation" routerLinkActive="active">Video Creations</a>
+              <a class="dropdown-item" routerLink="/service/language-translation" routerLinkActive="active">Language Translation</a>
+              <a class="dropdown-item" routerLink="/service/gamification" routerLinkActive="active">Gamification</a>
+              <a class="dropdown-item" routerLink="/service/scorm" routerLinkActive="active">SCORM Standard</a>
+              <a class="dropdown-item" routerLink="/service/ai-service" routerLinkActive="active">AI Services</a>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" routerLink="/pricing" routerLinkActive="active" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent">Pricing</a>
@@ -202,7 +113,6 @@
           </li>
         </ul>
       </div>
-      <!-- </div> -->
     </div>
   </nav>
 </div>
