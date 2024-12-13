@@ -30,20 +30,23 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getBlogs(); // Load initial page
+    let page = 1;
+    this.getBlogs(page); // Load initial page
   }
 
   // Fetch blogs with pagination
-  getBlogs(pageUrl: string = 'blogs') {
-    this.apiService.getBlog(pageUrl).subscribe({
+  getBlogs(page=1, pageUrl: string = 'blogs') {
+    
+    this.apiService.getBlog(pageUrl+"?page="+page).subscribe({
       next: (data: any) => {
         this.blogs = data.data;
-        this.pagination = {
-          current_page: data.current_page,
-          prev_page_url: data.prev_page_url,
-          next_page_url: data.next_page_url,
-          links: data.links,
-        };
+        // this.pagination = {
+        //   current_page: data.current_page,
+        //   prev_page_url: data.prev_page_url,
+        //   next_page_url: data.next_page_url,
+        //   links: data.links,
+        // };
+        this.pagination = data.links;
       },
       error: (err) => {
         console.error('Error fetching blogs', err);
@@ -55,7 +58,7 @@ export class BlogComponent implements OnInit {
   changePage(url: string | null) {
     if (url) {
       const relativeUrl = url.replace(this.apiService.url, ''); // Convert to relative URL
-      this.getBlogs(relativeUrl);
+      // this.getBlogs(relativeUrl);
     }
   }
 
