@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SafePipePipe } from '../safe-pipe.pipe';
 import { MainService } from '../service/main.service';
 import { ApiService } from '../service/api.service';
+import { SeoService } from '../service/seo.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -12,8 +13,16 @@ export class ContactUsComponent {
 
   employeeDetails: any;
 
-  constructor(private fb: FormBuilder, main: MainService, public api: ApiService) {
-    main.setMeta("Contact Us", 'description', 'assets/image/contact-us.png');
+  constructor(private fb: FormBuilder, main: MainService, public api: ApiService, public seoService: SeoService) {
+    // main.setMeta("Contact Us", 'description', 'assets/image/contact-us.png');
+    this.seoService.setMetaTags(
+      'Contact HasnaTech - Let’s Build Your Next Project', // Title
+      'Get in touch with HasnaTech for expert technology solutions tailored to your business.', // Description
+      'contact HasnaTech, IT consulting, technology solutions', // Keywords
+      'https://hasnatech.com/assets/images/contact-us-banner.jpg', // Image URL
+      'https://hasnatech.com/contact-us' // Page URL
+    );
+
     this.employeeDetails = this.fb.group({
       name: ['', Validators.required],
       subject: ['', Validators.required],

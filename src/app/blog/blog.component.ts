@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../service/main.service';
 import { ApiService } from '../service/api.service';
+import { SeoService } from '../service/seo.service';
 
 @Component({
   selector: 'app-blog',
@@ -15,9 +16,17 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    public mainService: MainService
+    public mainService: MainService,
+    public seoService: SeoService
   ) {
-    this.mainService.setMeta("Blog", 'description', 'assets/image/blog.png');
+    // this.mainService.setMeta("Blog", 'description', 'assets/image/blog.png');
+    this.seoService.setMetaTags(
+      'HasnaTech Blog - Insights into Technology and Innovation', // Title
+      "Stay updated with the latest trends and insights in technology, web development, and AI.", // Description
+      'Technology blog, HasnaTech insights, AI trends, web development tips', // Keywords
+      'https://hasnatech.com/assets/images/blog-banner.jpg', // Image URL
+      'https://hasnatech.com/blog' // Page URL
+    );
   }
 
   ngOnInit(): void {

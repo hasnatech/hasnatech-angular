@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MainService } from '../service/main.service';
 import { DomSanitizer, Meta } from '@angular/platform-browser';
 import { ApiService } from '../service/api.service';
+import { SeoService } from '../service/seo.service';
 
 @Component({
   selector: 'app-detail',
@@ -16,12 +17,14 @@ export class DetailComponent {
   @Input() type = '';
   blog: any[] = []; // Initialize as an array to prevent issues
   relatedBlog: any[] = [];
+  blogSeo: any;
 
   constructor(
     public apiService: ApiService,
     public service: MainService,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
+    public seoService: SeoService
   ) { }
 
   ngOnInit() {
@@ -48,6 +51,22 @@ export class DetailComponent {
         this.list += '</ul>';
       } else if (type === 'blog') {
         const slug = this.route.snapshot.paramMap.get('slug');
+
+        this.blogSeo = {
+          title: 'The Future of Web Development',
+          description: 'An in-depth look at the trends in web development and technology.',
+          imageUrl: 'https://hasnatech.com/assets/images/future-web-development.jpg',
+          url: `https://hasnatech.com/blog/${slug}`
+        };
+
+        // Set SEO meta tags dynamically
+        this.seoService.setMetaTags(
+          this.blogSeo.title,
+          this.blogSeo.description,
+          'web development, technology, trends, future of web development',
+          this.blogSeo.imageUrl,
+          this.blogSeo.url
+        );
 
         if (slug) {
           // Fetching the blog data based on the slug

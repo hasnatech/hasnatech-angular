@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { SeoService } from '../service/seo.service';
 // import { OwlOptions } from 'ngx-owl-carousel-o';
 // declare let $: any;
 
@@ -55,8 +56,14 @@ export class HomeComponent {
   //   (elemTop >= 0) && (elemBottom <= window.innerHeight) ? this.param4 = 216 : null;
   // }
 
-  constructor(public service: ServiceService) {
-
+  constructor(public service: ServiceService, public seoService: SeoService) {
+    this.seoService.setMetaTags(
+      'HasnaTech - Your Partner in Innovation', // Title
+      'Welcome to HasnaTech. We specialize in web development, AI services, and eLearning solutions.', // Description
+      'HasnaTech, web development, AI solutions, eLearning services, technology consulting', // Keywords
+      'https://hasnatech.com/assets/images/home-banner.jpg', // Image URL
+      'https://hasnatech.com/' // Page URL
+    );
   }
   // ngOnInit(): void {
   //   $(".owl-carousel").owlCarousel({
@@ -106,6 +113,8 @@ export class HomeComponent {
       "title": "Compliance Manager",
       "img":"assets/images/avatar/user5.png"
     }
-
   ]
+
+
+
 }
