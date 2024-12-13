@@ -19,6 +19,8 @@ export class DetailComponent {
   relatedBlog: any[] = [];
   blogSeo: any;
 
+  image_url = 'https://website.hasnatech.tech/storage/';
+
   constructor(
     public apiService: ApiService,
     public service: MainService,
@@ -88,17 +90,17 @@ export class DetailComponent {
                 }
 
                 // Update the list of recent blogs
-                this.list = "<h3 class='text-white mb-3'>Recent Blogs</h3><ul>";
-                this.relatedBlog.forEach((relatedBlogItem) => {
-                  if (relatedBlogItem.slug !== slug) {
-                    this.list += `<li class='mb-3'>
-                                    <a class='text-white' href='${this.service.getLink(relatedBlogItem, 'blog')}'>
-                                      ${relatedBlogItem.title}
-                                    </a>
-                                  </li>`;
-                  }
-                });
-                this.list += '</ul>';
+                // this.list = "<h3 class='text-white mb-3'>Recent Blogs</h3><ul>";
+                // this.relatedBlog.forEach((relatedBlogItem) => {
+                //   if (relatedBlogItem.slug !== slug) {
+                //     this.list += `<li class='mb-3'>
+                //                     <a class='text-white' href='${this.service.getLink(relatedBlogItem, 'blog')}'>
+                //                       ${relatedBlogItem.title}
+                //                     </a>
+                //                   </li>`;
+                //   }
+                // });
+                // this.list += '</ul>';
               }
             },
             error: (err) => {
