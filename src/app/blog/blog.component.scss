@@ -1,32 +1,36 @@
 .card {
-    width: 48%;
-    border-radius: 60px 60px 10px 10px;
-    border-top: 0;
-    cursor: pointer;
-  }
-  .bg_img{
-    background-image: url("../../assets/images/ser_bg2.png");
-    height: 246px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    // padding-bottom: 30px;
+  width: 48%;
+  border-radius: 60px 60px 10px 10px;
+  border-top: 0;
+  cursor: pointer;
+}
+
+.bg_img {
+  background-image: url("../../assets/images/ser_bg2.png");
+  height: 246px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  // padding-bottom: 30px;
 }
 
 h1 {
-    padding-top: 90px;
+  padding-top: 90px;
 }
-.card-body{
+
+.card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.green-bg{
+
+.green-bg {
   background-color: #049479;
   height: 100px;
 }
-.mt-50{
+
+.mt-50 {
   margin-top: -50px;
 }
 
@@ -38,6 +42,7 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+
   .row_header {
     height: 300px;
     border-radius: 10px 10px 0px 0px;
@@ -102,12 +107,24 @@ h1 {
 // }
 
 .truncated_text {
-  display: -webkit-box;         /* Required for line-clamping */
-  -webkit-box-orient: vertical; /* Sets the box's orientation to vertical */
-  overflow: hidden;            /* Hides overflow content */
-  text-overflow: ellipsis;     /* Adds ellipsis (...) at the end of the text */
-  -webkit-line-clamp: 3;       /* Number of lines to show */
-  max-height: calc(1.5em * 3); /* Optional: Height calculation for compatibility */
-  line-height: 1.5;            /* Adjust line height */
+  display: -webkit-box;
+  /* Required for line-clamping */
+  -webkit-box-orient: vertical;
+  /* Sets the box's orientation to vertical */
+  overflow: hidden;
+  /* Hides overflow content */
+  text-overflow: ellipsis;
+  /* Adds ellipsis (...) at the end of the text */
+  -webkit-line-clamp: 3;
+  /* Number of lines to show */
+  max-height: calc(1.5em * 3);
+  /* Optional: Height calculation for compatibility */
+  line-height: 1.5;
+  /* Adjust line height */
 }
 
+
+
+.page-link {
+  cursor: pointer;
+}

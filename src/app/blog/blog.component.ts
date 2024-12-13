@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from '../service/main.service';
 import { ApiService } from '../service/api.service';
 import { SeoService } from '../service/seo.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -13,40 +14,42 @@ export class BlogComponent implements OnInit {
   blogs: any[] = [];
   pagination: any = {};
   imgPreText = 'https://website.hasnatech.tech/storage/';
+  currentPage: number = 1; // Store the current page number
 
   constructor(
     private apiService: ApiService,
     public mainService: MainService,
-    public seoService: SeoService
+    public seoService: SeoService,
+    private activatedRoute: ActivatedRoute, // Inject ActivatedRoute to access route params
+    private router: Router // Inject Router to update URL when the page changes
   ) {
-    // this.mainService.setMeta("Blog", 'description', 'assets/image/blog.png');
+    // Set up meta tags for SEO
     this.seoService.setMetaTags(
-      'HasnaTech Blog - Insights into Technology and Innovation', // Title
-      "Stay updated with the latest trends and insights in technology, web development, and AI.", // Description
-      'Technology blog, HasnaTech insights, AI trends, web development tips', // Keywords
-      'https://hasnatech.com/assets/images/blog-banner.jpg', // Image URL
-      'https://hasnatech.com/blog' // Page URL
+      'HasnaTech Blog - Insights into Technology and Innovation',
+      "Stay updated with the latest trends and insights in technology, web development, and AI.",
+      'Technology blog, HasnaTech insights, AI trends, web development tips',
+      'https://hasnatech.com/assets/images/blog-banner.jpg',
+      'https://hasnatech.com/blog'
     );
   }
 
   ngOnInit(): void {
-    let page = 1;
-    this.getBlogs(page); // Load initial page
+    // Get the current page from the route or default to 1
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.currentPage = params['page'] || 1; // Set the current page from the URL or default to 1
+      this.getBlogs(); // Load blogs for the current page
+    });
   }
 
   // Fetch blogs with pagination
-  getBlogs(page=1, pageUrl: string = 'blogs') {
-    
-    this.apiService.getBlog(pageUrl+"?page="+page).subscribe({
+  getBlogs(page: number = this.currentPage) {
+    const pageUrl = `blogs?page=${page}`; // Include page in the request URL
+
+    this.apiService.getBlog(pageUrl).subscribe({
       next: (data: any) => {
         this.blogs = data.data;
-        // this.pagination = {
-        //   current_page: data.current_page,
-        //   prev_page_url: data.prev_page_url,
-        //   next_page_url: data.next_page_url,
-        //   links: data.links,
-        // };
         this.pagination = data.links;
+        this.currentPage = page; // Update the current page number
       },
       error: (err) => {
         console.error('Error fetching blogs', err);
@@ -54,12 +57,13 @@ export class BlogComponent implements OnInit {
     });
   }
 
-  // Handle page change
-  changePage(url: string | null) {
-    if (url) {
-      const relativeUrl = url.replace(this.apiService.url, ''); // Convert to relative URL
-      // this.getBlogs(relativeUrl);
-    }
+  // Handle page change by updating the URL
+  changePage(page: number) {
+    // Update the URL with the new page number
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: { page: page },
+      queryParamsHandling: 'merge', // Keep existing query params, only update 'page'
+    });
   }
-
 }
