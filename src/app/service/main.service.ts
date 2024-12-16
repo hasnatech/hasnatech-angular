@@ -10,6 +10,7 @@ import { ApiService } from './api.service';
 })
 export class MainService {
   blog: any;
+  year: any;
 
   constructor(private title: Title, private meta: Meta, private router: Router, public apiService: ApiService, private route: ActivatedRoute,) {
 
@@ -24,6 +25,10 @@ export class MainService {
         // subscribing to NavigationEnd which is about to happen
       }
     });
+
+    let now = new Date();
+    this.year = now.getFullYear();
+    console.log(this.year);
 
 
   }
@@ -53,8 +58,8 @@ export class MainService {
 
 
     const title = item.slug
-        .toLowerCase()
-        .replace(/[\s:;()]+/g, '-'); // Replace spaces, colons, semicolons, and parentheses with a dash
+      .toLowerCase()
+      .replace(/[\s:;()]+/g, '-'); // Replace spaces, colons, semicolons, and parentheses with a dash
 
     return `/${category}/${title}`;
 

@@ -38,9 +38,13 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'pricing', component: PricingComponent },
+
   { path: 'casestudy', component: CasestudyComponent },
+  { path: 'casestudy/:slug', component: CasestudyDetailComponent },
+
   { path: 'blog', component: BlogComponent },
-  { path: 'blog/:slug', component: BlogDetailComponent},
+  { path: 'blog/:slug', component: BlogDetailComponent },
+  
   { path: 'blog/:title/:id', component: BlogDetailComponent },
   { path: 'casestudy/:title/:id', component: CasestudyDetailComponent },
   { path: ':type/:title/:id', component: DetailComponent },
@@ -56,7 +60,7 @@ const routes: Routes = [
   { path: 'casestudy/transforming-supply-chain-training-with-gamification/4', component: CasestudyDetailComponent },
   { path: 'policy/data', component: DataPolicyComponent },
   { path: 'policy/cookies', component: CookiesPolicyComponent },
-  
+
 ];
 
 @NgModule({

@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainService } from '../service/main.service';
 import { SeoService } from '../service/seo.service';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-casestudy',
   templateUrl: './casestudy.component.html',
   styleUrls: ['./casestudy.component.scss']
 })
-export class CasestudyComponent {
-  constructor(public service: MainService, main: MainService, public seoService: SeoService) {
+export class CasestudyComponent implements OnInit {
+
+  caseStudies: any[] = []
+
+  constructor(public mainService: MainService, main: MainService, public seoService: SeoService, public apiService: ApiService) {
     // main.setMeta("Case Study", 'description', 'assets/image/case-study.png');
     this.seoService.setMetaTags(
       'Case Studies - Real-World Solutions by HasnaTech', // Title
@@ -19,9 +23,27 @@ export class CasestudyComponent {
     );
   }
 
+  ngOnInit() {
+    this.getCasestudy();
+  }
+
   getLink(item: any) {
     let link = "/casestudy/" + item.title.toLowerCase().split(" ").join("-") + "/" + item.id;
     // console.log("{ path: '" + link + "', component: DetailComponent},")
     return link;
   }
+
+
+  getCasestudy() {
+    this.apiService.getData('casestudies').subscribe({
+      next: (data: any) => {
+        this.caseStudies = data.data;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    })
+  }
+
+
 }

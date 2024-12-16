@@ -25,10 +25,10 @@
 
 
     <div class="row mb-3">
-        <div class="col-lg-6 mt-5 bg" routerLink="{{getLink(item)}}"  *ngFor="let item of service.casestudies">
+        <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'casestudy')}}"
+            *ngFor="let item of caseStudies">
             <div class="row_container shadow-lg">
                 <div class="row_header">
-                    <!-- <img class="img-fluid" src="{{item.img}}" alt="{{item.title}}"> -->
                 </div>
                 <div class="aligncol">
                     <div class="row_body pb-0 p-3">
@@ -36,11 +36,11 @@
                         <p [innerHTML]="item.description"></p>
                     </div>
                     <div class="row_footer pt-0 p-3">
-                        <a routerLink="{{getLink(item)}}">Learn more</a>
+                        <a routerLink="{{mainService.getLink(item, 'casestudy')}}">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <app-action-link></app-action-link>
+    <app-action-link></app-action-link>
 </div>

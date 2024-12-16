@@ -45,7 +45,7 @@ export class BlogComponent implements OnInit {
   getBlogs(page: number = this.currentPage) {
     const pageUrl = `blogs?page=${page}`; // Include page in the request URL
 
-    this.apiService.getBlog(pageUrl).subscribe({
+    this.apiService.getData(pageUrl).subscribe({
       next: (data: any) => {
         this.blogs = data.data;
         this.pagination = data.links;
