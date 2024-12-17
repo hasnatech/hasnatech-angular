@@ -18,7 +18,6 @@ export class DetailComponent {
   arrayData: any[] = []; // Initialize as an array to prevent issues
   related: any[] = [];
   dataSeo: any;
-
   pageType: any;
 
   // caseStudy: any[] = [];
@@ -72,7 +71,9 @@ export class DetailComponent {
             next: (response: any) => {
               if (response.related && response.casestudy) {
                 this.arrayData = Array.isArray(response.casestudy) ? response.casestudy : [response.casestudy]
-                this.related = Array.isArray(response.realted) ? response.realted : [response.related]
+                this.related = Array.isArray(response.realted) ? [response.realted] : response.related
+                console.log("Case study related content:", this.related);
+                
                 this.data = this.getFoundedData(slug);
                 if (this.data && this.data.content) {
                   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);

@@ -1,5 +1,5 @@
-<div class="bg_img" >
-<!-- [style]="{'background-image': 'url(' + this.image_url + data.image + ')'}"> -->
+<div class="bg_img">
+    <!-- [style]="{'background-image': 'url(' + this.image_url + data.image + ')'}"> -->
     <h1 class="container text-white">
         {{data.title}}
     </h1>
@@ -11,13 +11,15 @@
         </div>
         <div class="col-md-4">
             <!-- <div class="list_clr" [innerHTML]="list"> -->
-            <div class="list_clr">
+            <div class="list_clr" *ngIf="this.related">
                 <h3 class='mb-3'>Recent Blogs</h3>
+                <!-- {{this.related | json}} -->
                 <div *ngFor="let data of this.related" class="shadow mb-5 bg-white rounded">
                     <img [src]="this.image_url + data.image" alt="{{ data.title }}" class="img-fluid" />
                     <div class="p-3">
-                    <a class="hover:underline normal" [routerLink]="['/', pageType , data.slug]">{{ data.title }}</a>
-                </div>
+                        <a class="hover:underline normal" [routerLink]="['/', pageType , data.slug]">{{ data.title
+                            }}</a>
+                    </div>
                 </div>
             </div>
         </div>
