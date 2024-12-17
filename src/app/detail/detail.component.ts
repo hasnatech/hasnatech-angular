@@ -15,13 +15,10 @@ export class DetailComponent {
   data: any;
   list: any = '';
   @Input() type = '';
-  arrayData: any[] = []; // Initialize as an array to prevent issues
+  arrayData: any[] = []; 
   related: any[] = [];
   dataSeo: any;
   pageType: any;
-
-  // caseStudy: any[] = [];
-  // relatedCaseStudy: any[] = [];
 
   image_url = 'https://website.hasnatech.tech/storage/';
 
@@ -39,21 +36,7 @@ export class DetailComponent {
       const slug = this.route.snapshot.paramMap.get('slug');
 
       if (type === 'casestudy') {
-        // this.data = this.service.getCaseStudy(params['id']);
-        // if (this.data && this.data.content) {
-        //   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
-        // }
-        // this.list = "<h3 class='text-white mb-3'>Recent Casestudy</h3><ul>";
-        // this.service.casestudies.slice(0, 11).forEach((casestudy) => {
-        //   if (this.data.id !== casestudy.id) {
-        //     this.list += `<li class='mb-3'>
-        //                     <a class='text-white' href='${this.service.getLink(casestudy, 'casestudy')}'>
-        //                       ${casestudy.title}
-        //                     </a>
-        //                   </li>`;
-        //   }
-        // });
-        // this.list += '</ul>';
+
 
         if (slug) {
           this.pageType = 'casestudy';
@@ -73,7 +56,7 @@ export class DetailComponent {
                 this.arrayData = Array.isArray(response.casestudy) ? response.casestudy : [response.casestudy]
                 this.related = Array.isArray(response.realted) ? [response.realted] : response.related
                 console.log("Case study related content:", this.related);
-                
+
                 this.data = this.getFoundedData(slug);
                 if (this.data && this.data.content) {
                   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
@@ -110,19 +93,6 @@ export class DetailComponent {
                 if (this.data && this.data.content) {
                   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
                 }
-
-                // Update the list of recent blogs
-                // this.list = "<h3 class='text-white mb-3'>Recent Blogs</h3><ul>";
-                // this.relatedBlog.forEach((relatedBlogItem) => {
-                //   if (relatedBlogItem.slug !== slug) {
-                //     this.list += `<li class='mb-3'>
-                //                     <a class='text-white' href='${this.service.getLink(relatedBlogItem, 'blog')}'>
-                //                       ${relatedBlogItem.title}
-                //                     </a>
-                //                   </li>`;
-                //   }
-                // });
-                // this.list += '</ul>';
               }
             },
             error: (err) => {
