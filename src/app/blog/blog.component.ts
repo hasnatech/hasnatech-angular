@@ -50,7 +50,7 @@ export class BlogComponent implements OnInit {
         this.blogs = data.data;
         this.pagination = data.links;
         this.currentPage = page; // Update the current page number
-        console.log("pagination", this.pagination)
+        // console.log("pagination", this.pagination)
       },
       error: (err) => {
         console.error('Error fetching blogs', err);

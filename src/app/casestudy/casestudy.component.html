@@ -25,10 +25,12 @@
 
 
     <div class="row mb-3">
-        <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'casestudy')}}"
+        <!-- <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'casestudy')}}"
             *ngFor="let item of caseStudies">
             <div class="row_container shadow-lg">
-                <div class="row_header">
+               
+                <div class="row_header" [style.background-image]="'url(' + imgPreText + item.image + ')'"
+                    [attr.alt]="item.title">
                 </div>
                 <div class="aligncol">
                     <div class="row_body pb-0 p-3">
@@ -40,7 +42,36 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="col-lg-6 mt-5 bg" routerLink="{{mainService.getLink(item, 'casestudy')}}" *ngFor="let item of caseStudies">
+            <div class="row_container shadow-lg">
+                <div class="row_header" [style.background-image]="'url(' + imgPreText + item.image + ')'"
+                    [attr.alt]="item.title">
+                </div>
+                <div class="row_body p-3">
+                    <h3>{{item.title}}</h3>
+                    <p class="truncated_text">{{item.description}}</p>
+                </div>
+                <div class="row_footer p-3">
+                    <a routerLink="{{mainService.getLink(item, 'casestudy')}}">Learn more</a>
+                </div>
+            </div>
         </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" *ngIf="pagination.length > 3">
+            <ul class="pagination justify-content-end mt-4 gap-1">
+                <li *ngFor="let link of pagination" [class.active]="link.label == currentPage">
+                    <a class="page-link rounded" (click)="changePage(link)" [innerHTML]="link.label"
+                        *ngIf="link.url != null" [class.disabled]="link.url === null">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
+
+
     <app-action-link></app-action-link>
 </div>
