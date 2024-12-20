@@ -50,6 +50,7 @@ export class BlogComponent implements OnInit {
         this.blogs = data.data;
         this.pagination = data.links;
         this.currentPage = page; // Update the current page number
+        console.log("pagination", this.pagination)
       },
       error: (err) => {
         console.error('Error fetching blogs', err);
@@ -58,11 +59,12 @@ export class BlogComponent implements OnInit {
   }
 
   // Handle page change by updating the URL
-  changePage(page: number) {
+  changePage(page:any) {
     // Update the URL with the new page number
+    let number = page['url'].split("?page=")[1];
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
-      queryParams: { page: page },
+      queryParams: { page: number },
       queryParamsHandling: 'merge', // Keep existing query params, only update 'page'
     });
   }
