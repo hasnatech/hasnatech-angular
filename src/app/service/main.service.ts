@@ -21,7 +21,9 @@ export class MainService {
           title: 'Website',
           page: location.href
         }
-        apiService.post('info/create', data).subscribe(data => { console.log(data) });
+        apiService.post('info/create', data).subscribe(data => { 
+          // console.log(data) 
+        });
         // subscribing to NavigationEnd which is about to happen
       }
     });
@@ -494,6 +496,7 @@ export class MainService {
 
   setMeta(title: string, description: string, image: string): void {
     const fullTitle = `Hasna Technology | ${title}`;
+    
     this.title.setTitle(fullTitle);
 
     this.meta.updateTag({ name: 'description', content: description }, 'name="description"') ||

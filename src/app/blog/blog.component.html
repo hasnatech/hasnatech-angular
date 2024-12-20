@@ -32,7 +32,7 @@
         <nav aria-label="Page navigation example" *ngIf="pagination.length > 3">
             <ul class="pagination justify-content-end mt-4 gap-1">
                 <li *ngFor="let link of pagination" [class.active]="link.label == currentPage">
-                    <a class="page-link rounded" (click)="changePage(link.label)" [innerHTML]="link.label"
+                    <a class="page-link rounded" (click)="changePage(link)" [innerHTML]="link.label"
                         *ngIf="link.url != null" [class.disabled]="link.url === null">
                     </a>
                 </li>

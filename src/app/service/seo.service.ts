@@ -12,6 +12,7 @@ export class SeoService {
   // Method to set meta tags dynamically
   setMetaTags(title: string, description: string, keywords: string, imageUrl: string, pageUrl: string): void {
     // Set the title dynamically
+    console.log("fullTitle",title);
     this.titleService.setTitle(title);
 
     // Set the description dynamically
