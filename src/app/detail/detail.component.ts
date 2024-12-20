@@ -55,8 +55,7 @@ export class DetailComponent {
               if (response.related && response.casestudy) {
                 this.arrayData = Array.isArray(response.casestudy) ? response.casestudy : [response.casestudy]
                 this.related = Array.isArray(response.realted) ? [response.realted] : response.related
-                console.log("Case study related content:", this.related);
-
+                // console.log("Case study related content:", this.related);
                 this.data = this.getFoundedData(slug);
                 if (this.data && this.data.content) {
                   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
