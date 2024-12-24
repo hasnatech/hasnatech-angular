@@ -1,6 +1,6 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { ServiceService } from '../service.service';
+import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ServiceService } from '../service.service';
 import { SeoService } from '../service/seo.service';
 // import { OwlOptions } from 'ngx-owl-carousel-o';
 // declare let $: any;
@@ -59,7 +59,7 @@ export class HomeComponent {
   constructor(public service: ServiceService, public seoService: SeoService) {
     this.seoService.setMetaTags(
       'HasnaTech - Your Partner in Innovation', // Title
-      'Welcome to HasnaTech. We specialize in web development, AI services, and eLearning solutions.', // Description
+      'We deliver web development, AI services, and eLearning solutions to drive innovation and growth.', // Description
       'HasnaTech, web development, AI solutions, eLearning services, technology consulting', // Keywords
       'https://hasnatech.com/assets/images/home-banner.jpg', // Image URL
       'https://hasnatech.com/' // Page URL

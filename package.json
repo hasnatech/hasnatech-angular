@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "git": "git add . && git commit -m 'update' && git push",
-    "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/",
+    "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hasnatech-angular/browser/",
     "1preupload": "ng build --configuration production --base-href /",
     "deploy": "gh-pages -d dist/website",
     "render": "gh-pages -d dist/website/browser",

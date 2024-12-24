@@ -15,7 +15,7 @@ export class DetailComponent {
   data: any;
   list: any = '';
   @Input() type = '';
-  arrayData: any[] = []; 
+  arrayData: any[] = [];
   related: any[] = [];
   dataSeo: any;
   pageType: any;
@@ -110,13 +110,14 @@ export class DetailComponent {
 
   getMetaTags() {
     // Set SEO meta tags dynamically
-    this.seoService.setMetaTags(
-      this.dataSeo.title,
-      this.dataSeo.description,
-      this.dataSeo.keywords,
-      this.dataSeo.image,
-      this.dataSeo.url
-    );
+    if (this.dataSeo)
+      this.seoService.setMetaTags(
+        this.dataSeo.title,
+        this.dataSeo.description,
+        this.dataSeo.keywords,
+        this.dataSeo.image,
+        this.dataSeo.url
+      );
   }
 
 }

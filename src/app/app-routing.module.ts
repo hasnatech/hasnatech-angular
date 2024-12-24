@@ -21,6 +21,8 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
 import { LanguageTranslationComponent } from './language-translation/language-translation.component';
 import { VideoCreationComponent } from './video-creation/video-creation.component';
 import { AiServiceComponent } from './ai-service/ai-service.component';
+import { ChatComponent } from './chat/chat.component';
+import { BookComponent } from './book/book.component';
 const routes: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '', component: HomeComponent },
@@ -61,6 +63,8 @@ const routes: Routes = [
   { path: 'policy/data', component: DataPolicyComponent },
   { path: 'policy/cookies', component: CookiesPolicyComponent },
 
+  {path:'chat', component:ChatComponent},
+  {path:'book', component:BookComponent},
 ];
 
 @NgModule({

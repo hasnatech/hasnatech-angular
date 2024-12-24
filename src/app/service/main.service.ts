@@ -14,12 +14,16 @@ export class MainService {
 
   constructor(private title: Title, private meta: Meta, private router: Router, public apiService: ApiService, private route: ActivatedRoute,) {
 
+    let location = {
+      href: "https://hasnatech.com",
+      origin: "https://hasnatech.com",
+    };
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
 
         let data = {
           title: 'Website',
-          page: location.href
+          page: location?.href || ""
         }
         apiService.post('info/create', data).subscribe(data => { 
           // console.log(data) 
@@ -30,7 +34,7 @@ export class MainService {
 
     let now = new Date();
     this.year = now.getFullYear();
-    console.log(this.year);
+    // console.log(this.year);
 
 
   }
@@ -495,33 +499,34 @@ export class MainService {
   // }
 
   setMeta(title: string, description: string, image: string): void {
-    const fullTitle = `Hasna Technology | ${title}`;
+    return;
+    // const fullTitle = `Hasna Technology | ${title}`;
     
-    this.title.setTitle(fullTitle);
+    // this.title.setTitle(fullTitle);
 
-    this.meta.updateTag({ name: 'description', content: description }, 'name="description"') ||
-      this.meta.addTag({ name: 'description', content: description });
+    // this.meta.updateTag({ name: 'description', content: description }, 'name="description"') ||
+    //   this.meta.addTag({ name: 'description', content: description });
 
-    this.meta.updateTag({ property: 'og:title', content: fullTitle }, 'property="og:title"') ||
-      this.meta.addTag({ property: 'og:title', content: fullTitle });
+    // this.meta.updateTag({ property: 'og:title', content: fullTitle }, 'property="og:title"') ||
+    //   this.meta.addTag({ property: 'og:title', content: fullTitle });
 
-    this.meta.updateTag({ property: 'og:description', content: description }, 'property="og:description"') ||
-      this.meta.addTag({ property: 'og:description', content: description });
+    // this.meta.updateTag({ property: 'og:description', content: description }, 'property="og:description"') ||
+    //   this.meta.addTag({ property: 'og:description', content: description });
 
-    this.meta.updateTag({ property: 'og:image', content: `${location.origin}/${image}` }, 'property="og:image"') ||
-      this.meta.addTag({ property: 'og:image', content: `${location.origin}/${image}` });
+    // this.meta.updateTag({ property: 'og:image', content: `${location.origin}/${image}` }, 'property="og:image"') ||
+    //   this.meta.addTag({ property: 'og:image', content: `${location.origin}/${image}` });
 
-    this.meta.updateTag({ property: 'og:url', content: location.href }, 'property="og:url"') ||
-      this.meta.addTag({ property: 'og:url', content: location.href });
+    // this.meta.updateTag({ property: 'og:url', content: location.href }, 'property="og:url"') ||
+    //   this.meta.addTag({ property: 'og:url', content: location.href });
 
-    this.meta.updateTag({ name: 'twitter:title', content: fullTitle }, 'name="twitter:title"') ||
-      this.meta.addTag({ name: 'twitter:title', content: fullTitle });
+    // this.meta.updateTag({ name: 'twitter:title', content: fullTitle }, 'name="twitter:title"') ||
+    //   this.meta.addTag({ name: 'twitter:title', content: fullTitle });
 
-    this.meta.updateTag({ name: 'twitter:description', content: description }, 'name="twitter:description"') ||
-      this.meta.addTag({ name: 'twitter:description', content: description });
+    // this.meta.updateTag({ name: 'twitter:description', content: description }, 'name="twitter:description"') ||
+    //   this.meta.addTag({ name: 'twitter:description', content: description });
 
-    this.meta.updateTag({ name: 'twitter:image', content: `${location.origin}/${image}` }, 'name="twitter:image"') ||
-      this.meta.addTag({ name: 'twitter:image', content: `${location.origin}/${image}` });
+    // this.meta.updateTag({ name: 'twitter:image', content: `${location.origin}/${image}` }, 'name="twitter:image"') ||
+    //   this.meta.addTag({ name: 'twitter:image', content: `${location.origin}/${image}` });
   }
 
 }

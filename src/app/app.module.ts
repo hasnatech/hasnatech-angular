@@ -31,6 +31,8 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
 import { LanguageTranslationComponent } from './language-translation/language-translation.component';
 import { VideoCreationComponent } from './video-creation/video-creation.component';
 import { AiServiceComponent } from './ai-service/ai-service.component';
+import { ChatComponent } from './chat/chat.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { AiServiceComponent } from './ai-service/ai-service.component';
     WebDevelopmentComponent,
     LanguageTranslationComponent,
     VideoCreationComponent,
-    AiServiceComponent
+    AiServiceComponent,
+    ChatComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
