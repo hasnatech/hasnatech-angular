@@ -70,25 +70,33 @@ export class DetailComponent {
 
 
       } else if (type === 'blog') {
-        this.dataSeo = {
-          title: `Embracing the Future: Top eLearning Trends for ${this.mainService.year}`,
-          description: `Discover the future of eLearning with top trends shaping education and training in ${this.mainService.year}`,
-          keywords: 'eLearning trends, online education, training solutions, HasnaTech',
-          image: 'https://hasnatech.com/assets/images/blog-elearning-trends.jpg',
-          url: `https://hasnatech.com/blog/${slug}`,
-        };
-
-        this.getMetaTags();
+        
 
         if (slug) {
           // Fetching the blog data based on the slug
           this.pageType = 'blog';
           this.apiService.getDataBySlug(this.pageType, slug).subscribe({
             next: (response: any) => {
+              
               if (response.related && response.blog) {
                 this.arrayData = Array.isArray(response.blog) ? response.blog : [response.blog];
                 this.related = Array.isArray(response.related) ? response.related : [response.related];
                 this.data = this.getFoundedData(slug);
+                // console.log("Blog related content:", this.data);
+
+                this.dataSeo = {
+                  // title: `Embracing the Future: Top eLearning Trends for ${this.mainService.year}`,
+                  // description: `Discover the future of eLearning with top trends shaping education and training in ${this.mainService.year}`,
+                  
+                  // image: 'https://hasnatech.com/assets/images/blog-elearning-trends.jpg',
+                  title: this.data.title,
+                  description: this.data.description,
+                  keywords: 'eLearning trends, online education, training solutions, HasnaTech',
+                  image: `https://website.hasnatech.tech/storage/`+this.data.image,
+                  url: `https://hasnatech.com/blog/${slug}`,
+                };
+        
+                this.getMetaTags();
                 if (this.data && this.data.content) {
                   this.data.content = this.sanitizer.bypassSecurityTrustHtml(this.data.content);
                 }
@@ -111,6 +119,7 @@ export class DetailComponent {
   getMetaTags() {
     // Set SEO meta tags dynamically
     if (this.dataSeo)
+      
       this.seoService.setMetaTags(
         this.dataSeo.title,
         this.dataSeo.description,
