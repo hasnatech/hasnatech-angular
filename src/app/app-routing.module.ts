@@ -56,6 +56,7 @@ const routes: Routes = [
   { path: 'blog/adaptive-learning--tailoring-education-for-individual-success/4', component: BlogDetailComponent },
   { path: 'blog/gamification--elevating-engagement-and-learning-outcomes/5', component: BlogDetailComponent },
   { path: 'blog/mobile-learning--empowering-on-the-go-education/6', component: BlogDetailComponent },
+  { path: 'blog/5-trends-in-eLearning-2025', component: BlogDetailComponent },
   { path: 'casestudy/transitioning-from-adobe-flash-to-html5/1', component: CasestudyDetailComponent },
   { path: 'casestudy/rapid-video-development:-transforming-recruitment-training/2', component: CasestudyDetailComponent },
   { path: 'casestudy/a-cooling-challenge-game/3', component: CasestudyDetailComponent },
